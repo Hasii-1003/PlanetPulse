@@ -1,0 +1,201 @@
+/*Body of the page Styling*/
+body{
+    font-family: serif; /* Sets the font family for the body to serif */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f8f8e8; /* Sets the background color of the body */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+    position: relative; /* Positions the body relatively */
+    padding-top: 80px;
+}   
+  /*Banner section styling*/
+.banner{
+    max-width: 1550px; /* Sets the maximum width of the banner */
+    width: 100%;
+    margin-top: -20px; /* Adjusts the top margin of the banner */
+    margin-left: -20px; /* Adjusts the left margin of the banner */
+    margin-right: -40px; /* Adjusts the right margin of the banner */
+    height: 65px; /* Sets the height of the banner */
+    background-color: rgb(31, 103, 101); /* Sets the background color of the banner */
+    padding: 10px; /* Adds padding inside the banner */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    box-shadow: 0 2px 5px;
+    
+}
+  
+  
+  /*Style for logo */
+  .logo{
+    width: 180px; /* Sets the width of the logo */
+    height: 180px; /* Sets the height of the logo */
+    position: absolute; /* Positions the logo absolutely */
+    top: -10px; /* Positions the logo at the top of its container */
+    left: -20px; /* Adjusts the horizontal position of the logo */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the logo */
+    z-index: 1001;
+  }
+  
+  /*Title & subtitle container styling*/
+  .title-container{
+    background-color: #f8f8e8; /* Sets the background color of the title container */
+    display: flex; /* Uses flexbox for layout */
+    align-items: baseline; /* Aligns items to the baseline */
+    justify-content: center; /* Centers the content horizontally */
+    max-width: 1550px; /* Sets the maximum width of the title container */
+    margin-top: -20px; /* Adjusts the top margin of the title container */
+    margin-left: -20px; /* Adjusts the left margin of the title container */
+    margin-right: -40px; /* Adjusts the right margin of the title container */
+    padding: 24px; /* Adds padding inside the title container */
+    left: -20px; /* Adjusts the horizontal position of the title container */
+    color: black; /* Sets the text color to black */
+  
+  }
+  
+  .title{
+    font-size: 65px;
+  
+  }
+  
+  .subtitle{
+    position: absolute; /* Positions the subtitle absolutely */
+    text-transform: capitalize; /* Capitalizes the subtitle text */
+    top: 80px; /* Positions the subtitle 80px from the top */
+    font-size: 24px; /* Sets the font size of the subtitle */
+    margin-left: 100px; /* Adjusts the left margin of the subtitle */
+  }
+  
+  .background{
+    background-position: center; /* Centers the background image */
+    margin-left: 60px; /* Adjusts the left margin of the background */
+    padding: 70px; /* Adds padding inside the background */
+    margin-top: -50px; /* Adjusts the top margin of the background */
+  }
+    
+  .h1{
+    margin-bottom: 0px; /* Removes the bottom margin of h1 elements */
+  }
+  
+  
+  /*Navbar styling*/
+  .navbar{
+    width: 85%; /* Sets the width of the navbar */
+    margin: auto; /* Centers the navbar horizontally */
+    position: relative;
+    padding: 0 0; /* Removes padding inside the navbar */
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers the items vertically */
+    justify-content: space-between; /* Spaces the items evenly */
+  }
+  /*Navbar list items*/
+  .navbar ul li{
+    list-style: none; /* Removes the default list styling */
+    display: inline-block; /* Displays list items inline */
+    margin: 10px 20px; /* Adds margin around list items */
+    position: relative; /* Positions list items relatively */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 20px; /* Sets the font size of list items */
+  }
+  .navbar ul li a{
+    color: white; /* Sets the text color of links to white */
+    text-decoration: none; /* Removes underline from links */
+  }
+  .navbar ul li a :active{
+    text-decoration: underline;
+  }
+  /* Hover effect for navbar items */
+  .navbar ul li::after{
+    content: ''; /* Adds an empty content block */
+    height: 3px; /* Sets the height of the hover effect */
+    width: 0; /* Sets the initial width of the hover effect to 0 */
+    background: yellow; /* Sets the background color of the hover effect */
+    position: absolute; /* Positions the hover effect absolutely */
+    left: 0; /* Aligns the hover effect to the left */
+    bottom: -10px; /* Positions the hover effect below the list item */
+    transition: 0.5s; /* Adds a transition effect for smooth animation */
+  }
+  .navbar ul li:hover:after{
+    width: 100%; /* Expands the hover effect to full width on hover */
+  }
+  
+  /*Styling for page editors & Styling links*/
+  .footer-content{
+    background-color: rgb(31, 103, 101); /* Sets the background color of the footer */
+    padding: 36px; /* Adds padding inside the footer */
+    font-size: 18px; /* Sets the font size of the footer content */
+    text-align: center; /* Centers the text horizontally */
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes underline from text */
+    transition: background-color 0.3s ease; /* Adds a transition effect for background color */
+    left: 0px; /* Adjusts the horizontal position of the footer */
+    max-width: 1550px; /* Sets the maximum width of the footer */
+    margin-top: -20px; /* Adjusts the top margin of the footer */
+    margin-left: -20px; /* Adjusts the left margin of the footer */
+    margin-right: -40px; /* Adjusts the right margin of the footer */
+  
+  }
+  .footer-content a:hover{
+    color: rgb(19, 71, 70);
+  }
+  .footer-content a{
+    color: white; /* Sets the link color to white */
+    text-decoration: none; /* Removes underline from links */
+    margin: 40px; /* Adds margin around links */
+  }
+  
+  .styling{
+    background-color: rgb(41, 128, 125); /* Sets the background color of the styling section */
+    padding: 10px; /* Adds padding inside the styling section */
+    font-size: 18px; /* Sets the font size of the styling section */
+    text-align: center; /* Centers the text horizontally */
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes underline from text */
+    transition: background-color 0.3s ease; /* Adds a transition effect for background color */
+    max-width: 1550px; /* Sets the maximum width of the styling section */
+    margin-top: -20px; /* Adjusts the top margin of the styling section */
+    margin-left: -20px; /* Adjusts the left margin of the styling section */
+    margin-right: -40px; /* Adjusts the right margin of the styling section */
+  
+  }
+  
+  .styling a{
+    color: white; /* Sets the link color to white */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 18px; /* Sets the font size of links */
+    margin: 40px; /* Adds margin around links */
+  }
+  .styling a:hover{
+    color: rgba(18, 217, 220, 0.799);
+  }    
+  
+  .copyright{
+    background-color: rgb(41, 128, 125); /* Sets the background color of the copyright section */
+    color: white; /* Sets the text color to white */
+    padding: 2px; /* Adds padding inside the copyright section */
+    text-align: center; /* Centers the text horizontally */
+    max-width: 1550px; /* Sets the maximum width of the copyright section */
+    margin-top: -20px; /* Adjusts the top margin of the copyright section */
+    margin-left: -20px; /* Adjusts the left margin of the copyright section */
+    margin-right: -40px; /* Adjusts the right margin of the copyright section */
+    margin-bottom: -20px; /* Adjusts the bottom margin of the copyright section */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .title-container{/* Adjusts the height of the title container for smaller screens */
+      height: 200px;
+    }  
+    .subtitle{ /* Adjusts the height of the subtitle for smaller screens */
+      height: 200px;
+    }  
+    .banner{ /* Adjusts the height of the banner for smaller screens */
+      height: 200px;
+    }  
+    .footer-contenter {
+    height: 200px; /* Adjust for smaller screens */
+    }
+  }
+  

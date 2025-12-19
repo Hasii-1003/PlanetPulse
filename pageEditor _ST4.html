@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - 04 </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        main {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background: color #f4f4f4;;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color:#fafafa;
+        }
+        .ref li{
+            list-style: none;
+            padding-bottom: 9px;
+        }
+        .stud {
+            text-align: center;
+            line-height: 1.5px;
+            color: black;
+            margin-top: 10px;
+        }
+        .top {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+        
+        .top a {
+            padding: 10px 20px; /* Adds padding for button-like feel */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            text-decoration: none; /* Removes underline */
+            border-radius: 20px; /* Rounds the corners */
+            font-size: 12px; /* Adjust font size */
+            font-weight: bold; /* Make the text stand out */
+        }
+        .top a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <div class="vertical-line"></div>
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <li><a href="user profile.html" >Userprofile</a></li>
+            </ul> 
+        </div>
+    </div>
+
+
+    <section class="stud">
+        <h2>Dharani Wasundara [ Student 04 ]</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="user_profile">User Profile</h2>
+                
+                <h3>Technical Description</h3>
+                <p>
+                    The webpage is built using a combination of HTML for structure and CSS for styling, 
+                    with a focus on creating a clean, modern, and interactive user experience.<br>
+                    Here's a breakdown of the key techniques and design choices:
+                    <ul>
+                        <li><b>HTML Structure:</b> The page is structured with semantic HTML elements such as <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;footer&gt;</code> to ensure clarity and accessibility.</li>
+                        <li><b>CSS Styling:</b> The page uses CSS for styling, including a gradient background, hover effects, and transitions to enhance interactivity. Flexbox and Grid layouts are used for responsive design.</li>
+                        <li><b>Interactive Elements:</b> JavaScript is used to dynamically update the rating sliders and their displayed values, providing real-time feedback to users.</li>
+                        <li><b>Responsive Design:</b> The layout is designed to be responsive, ensuring it adapts to different screen sizes and devices.</li>
+                        <li><b>Calendar Grid:</b> A 7-column grid is used to display the calendar, with hover effects and event markers for better user engagement.</li>
+                    </ul>
+                </p>
+            
+                <h3>Accessibility</h3>
+                <p>
+                    Accessibility was addressed in the following ways:
+                    <ul>
+                        <li><b>Semantic HTML:</b> Proper use of HTML5 elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> ensures screen readers can navigate the page effectively.</li>
+                        <li><b>ARIA Labels:</b> Interactive elements like sliders and buttons include ARIA attributes to improve accessibility for users with disabilities.</li>
+                        <li><b>Color Contrast:</b> The color scheme was chosen to ensure sufficient contrast between text and background, making it easier to read for users with visual impairments.</li>
+                        <li><b>Keyboard Navigation:</b> All interactive elements are accessible via keyboard, ensuring users who cannot use a mouse can still navigate the page.</li>
+                    </ul>
+                </p>
+            
+                <h3>Link to the validation page</h3>
+                <p>
+                    <a href="validation_ST04.html#user_profile">Validation page</a>
+                </p>
+            
+                <h3>Link to the page</h3>
+                <p>
+                    <a href="user profile.html">User Profile.</a>
+                </p>
+            </section>
+
+            <section>
+                <h2 id="sitemap">Sitemap</h2>
+            
+                <h3>Technical Description</h3>
+                <p>
+                    The sitemap page is implemented using a combination of HTML for structure and CSS for styling, with an interactive SVG graphic to visually represent the website's structure. Below are the key techniques and design choices:
+                    <ul>
+                        <li><b>HTML Structure:</b> The page uses semantic HTML elements like <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;svg&gt;</code> to create a clear and organized layout. The SVG graphic is embedded directly into the HTML, allowing for dynamic and interactive elements.</li>
+                        <li><b>CSS Styling:</b> CSS is used to style the page, including a gradient background, hover effects, and transitions for interactivity. Flexbox is used to center the SVG graphic and ensure responsiveness.</li>
+                        <li><b>SVG Graphic:</b> The sitemap is created using SVG elements like <code>&lt;circle&gt;</code> for nodes and <code>&lt;line&gt;</code> for connections. Each node represents a page on the website, and lines indicate the relationships between pages.</li>
+                        <li><b>Interactivity:</b> JavaScript is used to add tooltips that appear when hovering over nodes, providing additional information about each page. This enhances user experience and accessibility.</li>
+                        <li><b>Responsive Design:</b> The page is designed to be responsive, with the SVG graphic scaling appropriately to fit different screen sizes.</li>
+                    </ul>
+                </p>
+            
+                <h3>Accessibility</h3>
+                <p>
+                    Accessibility was addressed in the following ways:
+                    <ul>
+                        <li><b>Semantic HTML:</b> Proper use of HTML5 elements ensures screen readers can navigate the page effectively.</li>
+                        <li><b>ARIA Attributes:</b> Interactive elements like nodes and links include ARIA attributes to improve accessibility for users with disabilities.</li>
+                        <li><b>Keyboard Navigation:</b> All interactive elements are accessible via keyboard, ensuring users who cannot use a mouse can still navigate the page.</li>
+                        <li><b>Tooltips:</b> Tooltips provide additional context for each node, making the sitemap easier to understand for all users.</li>
+                    </ul>
+                </p>
+            
+                <h3>Link to the validation page</h3>
+                <p>
+                    <a href="validation_ST04.html#volunteerVal">Validation page</a>
+                </p>
+            
+                <h3>Link to the page</h3>
+                <p>
+                    <a href="sitemap.html">Site map</a>
+                </p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+            
+                <h3>Technical Description</h3>
+                <p>
+                    The content page is designed to provide an engaging and informative experience using a combination of HTML for structure and CSS for styling. Below are the key techniques and design choices:
+                    <ul>
+                        <li><b>HTML Structure:</b> The page uses semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> to create a clear and organized layout. Each section is logically divided to present information in a structured manner.</li>
+                        <li><b>CSS Styling:</b> CSS is used to style the page, including a gradient background, hover effects, and transitions for interactivity. Flexbox is used for layout management, ensuring responsiveness and alignment of elements.</li>
+                        <li><b>Navigation Bar:</b> The navigation bar is sticky, ensuring it remains visible as the user scrolls. It uses flexbox for alignment and horizontal scrolling for smaller screens, improving usability.</li>
+                        <li><b>Subtopic Sections:</b> Each subtopic section uses a flexbox layout to align images and content side by side. Hover effects and transitions are added to enhance interactivity and visual appeal.</li>
+                        <li><b>Responsive Design:</b> Media queries are used to ensure the page adapts to different screen sizes. On smaller screens, the layout switches to a vertical stack, and font sizes are adjusted for readability.</li>
+                        <li><b>Go-to-Top Button:</b> A fixed-position button is added to allow users to quickly scroll back to the top of the page. JavaScript is used to toggle its visibility based on scroll position.</li>
+                    </ul>
+                </p>
+            
+                <h3>Accessibility</h3>
+                <p>
+                    Accessibility was addressed in the following ways:
+                    <ul>
+                        <li><b>Semantic HTML:</b> Proper use of HTML5 elements ensures screen readers can navigate the page effectively.</li>
+                        <li><b>ARIA Attributes:</b> Interactive elements like the navigation bar and buttons include ARIA attributes to improve accessibility for users with disabilities.</li>
+                        <li><b>Keyboard Navigation:</b> All interactive elements are accessible via keyboard, ensuring users who cannot use a mouse can still navigate the page.</li>
+                        <li><b>Contrast and Readability:</b> The color scheme was chosen to ensure sufficient contrast between text and background, making it easier to read for users with visual impairments.</li>
+                        <li><b>Responsive Design:</b> The page is designed to be fully responsive, ensuring it is usable on a wide range of devices, including mobile phones and tablets.</li>
+                    </ul>
+                </p>
+            
+                <h3>Link to the validation page</h3>
+                <p>
+                    <a href="validation_ST04.html#contentVal">Validation page</a>
+                </p>
+            
+                <h3>Link to the page</h3>
+                <p>
+                    <a href="content_ST4.html">Content page</a>
+                </p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>
+                    While working on this project, I encountered several challenges that tested my problem-solving skills and taught me valuable
+                     lessons. Below, I outline the key challenges I faced and how I resolved them:
+                </p>
+                <ul>
+                    <li>
+                        <b>Matching CSS Classes with the Global Template CSS:</b>
+                        <ul>
+                            <li>
+                                <b>Challenge:</b> One of the initial challenges was ensuring that my custom CSS classes aligned with the global
+                                 template's styling. There were conflicts between my styles and the predefined styles in the global template, which 
+                                 caused inconsistencies in the design.
+                            </li>
+                            <li>
+                                <b>Solution:</b> To resolve this, I carefully reviewed the global template's CSS file and adjusted my custom
+                                 classes to avoid naming conflicts. I also used more specific CSS selectors to ensure my styles took precedence 
+                                 where needed. Additionally, I utilized browser developer tools to debug and test the changes in real-time.
+                            </li>
+                            <li>
+                                <b>Lesson Learned:</b> I learned the importance of understanding global styles and how to structure my CSS to
+                                 avoid conflicts. This experience also improved my debugging skills using browser tools.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Learning SVG for the Sitemap:</b>
+                        <ul>
+                            <li>
+                                <b>Challenge:</b> Creating the interactive SVG sitemap was a significant challenge, especially ensuring proper 
+                                syntax and alignment. I struggled with correctly placing the nodes and lines, and debugging issues with missing or 
+                                misplaced parentheses in the SVG code.
+                            </li>
+                            <li>
+                                <b>Solution:</b> I resolved this by breaking down the SVG code into smaller, manageable sections and testing each 
+                                part individually. I also used online SVG validators to check for syntax errors and ensure proper alignment.
+                                 Additionally, I referred to documentation and tutorials to better understand SVG properties and attributes.
+                            </li>
+                            <li>
+                                <b>Lesson Learned:</b> This experience taught me the importance of patience and attention to detail when working
+                                 with complex code like SVG. I also gained a deeper understanding of SVG syntax and its capabilities.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Ensuring Responsiveness Across Devices:</b>
+                        <ul>
+                            <li>
+                                <b>Challenge:</b> Making the page fully responsive for different screen sizes, especially mobile devices, was 
+                                challenging. Some elements did not align properly or became too small to read on smaller screens.
+                            </li>
+                            <li>
+                                <b>Solution:</b> I used media queries to adjust the layout, font sizes, and spacing for different screen sizes.
+                                 I also tested the page on multiple devices and browsers to ensure consistency.
+                            </li>
+                            <li>
+                                <b>Lesson Learned:</b> I learned the importance of designing with responsiveness in mind from the start and 
+                                how to use media queries effectively to create a seamless user experience across devices.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Implementing Accessibility Features:</b>
+                        <ul>
+                            <li>
+                                <b>Challenge:</b> Ensuring the page was accessible to all users, including those with disabilities,
+                                 was a new challenge for me. I had to learn about ARIA attributes, semantic HTML, and keyboard navigation.
+                            </li>
+                            <li>
+                                <b>Solution:</b> I incorporated ARIA attributes for interactive elements, used semantic HTML 
+                                tags, and ensured all functionality was accessible via keyboard. I also tested the page with screen readers to
+                                 identify and fix accessibility issues.
+                            </li>
+                            <li>
+                                <b>Lesson Learned:</b> This experience taught me the importance of accessibility in
+                                 web design and how to implement best practices to make websites inclusive for all users.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    Overall, these challenges helped me grow as a developer and taught me valuable skills in debugging, problem-solving,
+                     and creating user-friendly, accessible, and responsive web pages.
+                </p>
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance</h2>
+                <p>
+                    The pages I have created are designed to comply with the Janet Web Accessibility Regulations,
+                     which are based on the Web Content Accessibility Guidelines (WCAG) 2.1. These regulations ensure that web 
+                     content is accessible to all users, including those with disabilities. Below, I outline how my pages adhere
+                      to these standards:
+                </p>
+                <ul>
+                    <li>
+                        <b>Semantic HTML:</b>
+                        <ul>
+                            <li>
+                                I used semantic HTML elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                                <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>
+                                 to structure the content. This ensures that screen readers and other assistive technologies 
+                                 can interpret and navigate the page effectively.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Keyboard Accessibility:</b>
+                        <ul>
+                            <li>
+                                All interactive elements, such as navigation links, buttons, and form inputs,
+                                 are fully accessible via keyboard. Users can navigate the page using the <kbd>Tab</kbd> key,
+                                  and focus states are clearly visible to indicate the currently selected element.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>ARIA Attributes:</b>
+                        <ul>
+                            <li>
+                                I incorporated ARIA (Accessible Rich Internet Applications) attributes to 
+                                improve accessibility for dynamic content and interactive elements. For example, I used 
+                                <code>aria-label</code> to provide descriptive text for icons and buttons, and <code>role</code> 
+                                to define the purpose of certain elements.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Color Contrast and Readability:</b>
+                        <ul>
+                            <li>
+                                I ensured sufficient color contrast between text and background colors to meet WCAG 2.1 AA 
+                                standards. This makes the content readable for users with visual impairments or color blindness.
+                                 I used tools like the WebAIM Contrast Checker to verify compliance.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Responsive Design:</b>
+                        <ul>
+                            <li>
+                                The pages are fully responsive and adapt to different screen sizes, including 
+                                mobile devices and tablets. This ensures that users can access the content on any device 
+                                without losing functionality or readability.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Alt Text for Images:</b>
+                        <ul>
+                            <li>
+                                All images include descriptive <code>alt</code> text to ensure that users with 
+                                visual impairments can understand the content of the images through screen readers.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Form Accessibility:</b>
+                        <ul>
+                            <li>
+                                Forms are designed with accessible labels and error messages.
+                                 Each input field is associated with a <code>&lt;label&gt;</code> element, 
+                                 and error messages are clearly displayed to assist users in correcting mistakes.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Testing and Validation:</b>
+                        <ul>
+                            <li>
+                                I used tools like the W3C Markup Validation Service and accessibility checkers 
+                                (e.g., Lighthouse, Axe) to test the pages for compliance. While I aimed for full compliance,
+                                 I acknowledge that some areas may require further improvement, such as ensuring all dynamic content 
+                                 is fully accessible.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    While I have made significant efforts to ensure compliance with Janet regulations, I recognize that accessibility is an ongoing process. I am committed to continuously improving the accessibility of my pages and addressing any issues identified through user feedback or further testing.
+                </p>
+            </section>
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>W3Schools (n.d.) <i>HTML Tutorial.</i> Available at: <a href="https://www.w3schools.com/html/" target="_blank">https://www.w3schools.com/html/</a> (Last accessed: 27 Feb 2025).</li>
+                        <li>VuDungDev (2023) <i>User Profile Page Template HTML CSS | Free Download Template.</i> Available at: <a href="https://youtu.be/bNg1H0dOGdg?si=eJvXDo_QKQvyDURv" target="_blank">https://youtu.be/bNg1H0dOGdg</a> (Last accessed: 28 Feb 2025).</li>
+                        <li>Web Zone (2023) <i>Div Box Image Hover | HTML, CSS Image Card Hover Effect.</i> Available at: <a href="https://youtu.be/Zz8A4NqoLrE?si=khEvLUK_WooJ5Aq5" target="_blank">https://youtu.be/Zz8A4NqoLrE</a> (Last accessed: 01 March  2025).</li>
+                        <li>Borbély, H.M. (2023) <i>Introduction to SVGs: A Beginner's Guide to Scalable Vector Graphics.</i> Available at: <a href="https://youtu.be/hZYaSGUbMds?si=PIb5Ieh-0uye5y_H" target="_blank">https://youtu.be/hZYaSGUbMds</a> (Last accessed: 27 Feb 2025).</li>
+                        <li>WebTech Gyan (2023) <i>Draw Underline Link on Hover Effect | CSS Menu Hover Effect With Animation.</i> Available at: <a href="https://youtu.be/_SWVPKY9ddI?si=PiAEKo3z5fwT8_Mr" target="_blank">https://youtu.be/_SWVPKY9ddI</a> (Last accessed: 05 March 2025).</li>
+                        <p></p>
+                    </ul>
+                </p>
+            </section>
+
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="#user_profile">Profile page </a></li>
+                        <li><a href="#sitemap">Sitemap page</a></li>
+                        <li><a href="#compliance">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!--Page Editors links & styling links-->
+            <h2>Page Editors</h2>
+            <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+            <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+            <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+            <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+        </div>
+        <div class="styling">
+            <h2>Links</h2>
+            <a href="style.css" target="_blank">General Page Styling</a>
+            <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+            <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+            <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+        </div>
+    
+        <!--Copyrights Informations-->
+        <div class="copyright">
+            <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+        </div>
+    </footer>    
+</body>
+</html>

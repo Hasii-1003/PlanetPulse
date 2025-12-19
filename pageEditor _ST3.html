@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Niveka Wijeratne</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
+    <style>
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+main {
+    flex: 3;
+}
+aside {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.ref li{
+    list-style: none;
+    padding-bottom: 9px;
+}
+
+aside a{
+    text-decoration : none;
+}
+
+aside li{
+    padding-bottom: 4px;
+}
+
+.stud {
+    text-align: center;
+    line-height: 0;
+    background-color: #cbccc2ef;
+    color: black;
+    margin-top: 8px;
+}
+
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 20px; /* Adds padding for button-like feel */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+img{
+    width: 90%;
+}
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+                </div>
+            </div>
+         </div>
+    </header>
+
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html" >Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="user profile.html">Userprofile</a></li>
+            </ul> 
+        </div>
+      </div>
+
+    <section class="stud">
+        <h2>Niveka Wijeratne, Student 03</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="feedback">Feedback Form Page</h2>
+                    <h3>Technical Description</h3>
+                    
+                    <h4>HTML Structure</h4>
+                    <ul>
+                        <li>The form tag is used to create the form, it encapsulates all the input fields and buttons.</li>
+                        <li>The fieldset tag is used to group related elements together to improve the form's structure.</li>
+                        <li>The legend tag provides a caption for the created group using fieldset tag.</li>
+                        <li>The input tag with different type attributes(text, email, tel, radio, checkbox, file) is used to collect user inputs while using HTML validation.</li>
+                        <li>The textarea tag allowes multi-line text input for user's to provide comments.</li>
+                        <li>The select tag and option tag is used to create dropdowns and multi-select lists. datalist tag provides a searchable input field with predefined suggestions.</li>
+                        <li>The button tag has type attributes such as submit and reset which is used to submit or reset the form.</li>
+                    </ul>
+
+                    <h4>CSS Styling</h4>
+                    <ul>
+                        <li>Background and Layout:
+                            <ul>
+                                <li>background-image: Used a background image overlayed with a gradient.</li>
+                                <li>max-width and margin: The form is centered on the page with a maximum width of 600px for better readability.</li>
+                                <li>border-radius and box-shadow: Used to round the corners and give a subtle shadow to the form.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Form Elements:
+                            <ul>
+                                <li>padding and border: Used for better visibility and interaction with the input fields.</li>
+                                <li>hover and focus effects: To improve interactivity by making the color or style change of input fields and buttons when hovered over.</li>
+                                <li>accent-color: Used to customize the color of checkboxes and radio buttons to match the website's theme.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>File Upload:
+                            <ul>
+                                <li>Custom Button Styling: The file input is hidden, and a custom button is styled to trigger the file upload.</li>
+                                <li>display: none: Hides the default file input, replacing it with a more visually appealing button.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Error Messages:
+                            <ul>
+                                <li>display: none and color: red: Error messages are made to be hidden by default and displayed in red when validation fails.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Responsive Design:
+                            <ul>
+                                <li>max-width and width: calc(100% - 20px): Used to ensure form elements scale properly on different screen sizes.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Hearts Rating:
+                            <ul>
+                                <li>flex Layout: Used to evenly space the hearts using display: flex and justify-content: space-between.</li>
+                                <li>color and transition: Hearts change color on hover and when selected, providing visual feedback.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>JavaScript Functionality</h4>
+                    <ul>
+                        <li>HTML5 Validation: Uses built-in validation (e.g. required, type="email", pattern) to ensure correct input formats.</li>
+                        <li>Custom Error Messages: Displays error messages for invalid inputs (e.g. "Please enter a valid email address").</li>
+                        <li>Hearts Rating: Changes the color of hearts based on user selection or hover, providing visual feedback.</li>
+                        <li>Dynamically updates the character counter as the user types in the feedback textarea.</li>
+                        <li>Form Submission:
+                            <ul>
+                                <li>addEventListener('submit'): Prevents the default form submission and collects form data using FormData.</li>
+                                <li>window.open(): Opens a mailto link if the user chooses to send feedback via email.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <h3>Accessibility</h3>
+                    <ul>
+                        <li>Semantic HTML: Used form, fieldset, legend, and label tags to ensure screen readers can interpret the form structure and associate labels with inputs.</li>
+                        <li>HTML5 Validation: Used required, type="email", and pattern attributes for real-time validation, with clear error messages for invalid inputs.</li>
+                        <li>ARIA Attributes: Added ARIA roles and aria-describedby for error messages to improve screen reader compatibility and dynamic content accessibility.</li>
+                        <li>Alt Text for Images: Provided descriptive alt text for all images (e.g., the loading GIF) to ensure visually impaired users understand their purpose.</li>
+                        <li>Keyboard Navigation: Made all interactive elements (e.g., inputs, buttons, dropdowns) accessible via keyboard, with visible focus indicators for clarity.</li>
+                    </ul>
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#feedbackVal">Validation Page</a><!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="feedback.html">Feedback Form Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="team">Team Page</h2>
+                    <h3>Technical Description</h3>
+
+                    <h4>HTML Structure</h4>
+                    <ul>
+                        <li>Headings are used hierarchically (h1 for the page title, h2 for team member names, and h3 for roles) to improve accessibility and Search Engine Optimization.</li>
+                        <li>The div tag is used to represent each team member by a card containing an image, name, role, and a hidden details section.</li>
+                        <li>Hidden details about each team member’s tasks are revealed on hover, using CSS transitions.</li>
+                        <li>The main tag encapsulates the main content of the team page, ensuring a clear structure for screen readers.</li>
+                    </ul>
+
+                    <h4>CSS Styling</h4>
+                    <ul>
+                        <li>Layout and Grid:
+                            <ul>
+                                <li>display: grid: The team members are arranged in a grid layout using CSS Grid, with a diamond-shaped positioning (grid-column and grid-row properties).</li>
+                                <li>gap: 20px: Adds spacing between team member cards for better readability and visual appeal.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Hover Effects:
+                            <ul>
+                                <li>On hover, images scale up slightly (transform: scale(1.1)) and reduce opacity (opacity: 0.8), providing visual feedback.</li>
+                                <li>Hidden details (e.g. tasks) become visible on hover with a fade-in effect (opacity: 1 and visibility: visible).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Used text-shadow to add a soft shadow to the page title (h1) for emphasis and visual depth.</li>
+                        <li>Added padding-bottom to the main content to ensure the footer doesn’t overlap with the team member cards.</li>
+                    </ul>
+
+                    <ul>
+                        <li>Typography:
+                            <ul>
+                                <li>Team member images are styled as circles using border-radius: 50% property.</li>
+                                <li>Added subtle shadows to images and text elements using box-shadow property.</li>
+                                <li>Used a semi-transparent background along with contrasting text color for details section to improve readability.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Accessibility</h3>
+                    <ul>
+                        <li>All images have descriptive alt text, ensuring screen readers can convey the content to visually impaired users.</li>
+                        <li>Added to each team member card to make them focusable via keyboard navigation, improving accessibility for users who rely on keyboards or screen readers.</li>
+                        <li>Semantic HTML: Used header, main, and footer for clear structure, and h1 to h3 for hierarchical headings, improving screen reader navigation.</li>
+                        <li>Used high-contrast colors (e.g. dark text on light backgrounds) and clear typography to improve readability.</li>
+                    </ul>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#teamVal">Validation Page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="team.html">Team Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+
+                    <h4>HTML Structure</h4>
+                    <ul>
+                        <li>Each subtopic is wrapped in a div tag with a unique id for internal linking.</li>
+                        <li>Lists (ul and ol) are used to present key points and facts in a structured manner.</li>
+                        <li>Used a background video with an overlay text(div class="overlay-text") to introduce the theme of the page.</li>
+                        <li>Added a fixed side navigation bar(div class="side-nav") which allows users to jump to different sections of the page using anchor links.</li>
+                        <li>Added a fixed "Go to Top" button allows users to quickly return to the top of the page.</li>
+                    </ul>
+
+                    <h4>CSS Styling</h4>
+                    <ul>
+                        <li>Page Layout and Image Grid:
+                            <ul>
+                                <li>display: flex and grid: Used for organizing images in a grid layout and centering content.</li>
+                                <li>position: fixed: The side navigation and "Go to Top" button are fixed to ensure they remain visible as users scroll.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Content Section Styling:
+                            <ul>
+                                <li>background-color and border-left: Added uniques colored backgrounds and left borders to the subtopic sections for visual distinction.</li>
+                                <li>box-shadow and border-radius: To add depth and rounded corners to content sections.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>Hover Effects:
+                            <ul>
+                                <li>transition and transform: To move the side navigation links slightly to the right on hover, providing visual feedback.</li>
+                                <li>text-decoration: underline: Links are underlined on hover to indicate interactivity.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>text-shadow: Used to add emphasis to the page title (h1) with a soft shadow.</li>
+                        <li>max-width and margin: 0 auto: Used to center the content to a maximum width for better readability on larger screens.</li>
+                        <li>object-fit: cover: Ensures images and videos maintain their aspect ratio and fill their containers.</li>
+                        <li>z-index: Used to control the layering of elements (e.g. video overlay text appears above the video).</li>
+                    </ul>
+
+                    <h3>Accessibility</h3>
+                    <ul>
+                        <li>Semantic HTML: Used header, main, and footer for clear page structure, and h1 to h3 for hierarchical headings, improving screen reader navigation.</li>
+                        <li>All images include a descriptive alt text (e.g. "Carbon Footprint Factors") to ensure screen readers can convey their purpose.</li>
+                        <li>Interactive elements with hovering effects so that the users can see which element is currently focused.</li>
+                        <li>Used high-contrast colours and clear typography to improve readability for users with visual impairments.</li>
+                        <li>The page layout adapts to different screen sizes.</li>
+                    </ul>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#contentVal">Validation Page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST3.html">Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                
+                <h3>Challenges and Resolutions:</h3>
+                <h3>1. Feedback Form Page</h3>
+
+                <ul>
+                    <li>Implementing real-time validation for fields like email, phone number, and character limits was challenging, especially ensuring that error messages were clear and accessible.
+                        <ul>
+                            <li>Used HTML5 validation attributes (required, type="email", pattern) and custom JavaScript to provide real-time feedback. Error messages were styled with CSS to ensure visibility.</li>
+                        </ul>
+                    </li>
+                    <li>The hearts rating system was challenging as it required careful planning to be both functional and visually appealing.
+                        <ul>
+                            <li>Used radio buttons styled with CSS to create the hearts rating system. Added tabindex="0" and ARIA attributes to ensure keyboard accessibility.</li>
+                        </ul>
+                    </li>
+                    <li>Matching the style of file upload input with the website's theme while maintaining accessibility was harder than expected.
+                        <ul>
+                            <li>Hid the default file input and replaced it with a custom-styled button (label). Added visual feedback for uploaded files.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2. Team Page</h3>
+                
+                <ul>
+                    <li>Arranging team member cards in a diamond-shaped grid while ensuring responsiveness was complex.
+                        <ul>
+                            <li>Used CSS Grid with grid-column and grid-row properties to position team member cards in a diamond shape. Adjusted spacing with gap and margin.</li>
+                        </ul>
+                    </li>
+                    <li>Implementing hover effects that revealed additional details without disrupting the layout.
+                        <ul>
+                            <li>Used opacity and visibility transitions to smoothly reveal details on hover. Added tabindex="0" to make cards focusable and accessible via keyboard.</li>
+                        </ul>
+                    </li>
+                </ul>
+                    
+                <h3>3. Content Page</h3>
+                
+                <ul>
+                    <li>Ensuring the video background was responsive and did not interfere with readability of overlay text required careful CSS adjustments.
+                        <ul>
+                            <li>Used object-fit: cover and z-index to ensure the video scaled properly and stayed behind the overlay text. Added a semi-transparent background to the text for better contrast.</li>
+                        </ul>
+                    </li>
+                    <li>Positioning the side navigation bar to remain fixed while scrolling without overlapping content was difficult.
+                        <ul>
+                            <li>Used position: fixed and z-index to keep the navigation bar visible and prevent overlap with content. Added padding to the main content to avoid overlap.</li>
+                        </ul>
+                    </li>
+                    <li>Creating a responsive image grid that maintained alignment and spacing across different screen sizes was challenging.
+                        <ul>
+                            <li>Used display: flex and flex-wrap to create a responsive grid. Adjusted margins and padding to ensure consistent spacing.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Lessons Learned:</h3>
+                <ul>
+                    <li>Always prioritize accessibility to ensure inclusivity for all users.</li>
+                    <li>Provide real-time validation and clear error messages for better usability.</li>
+                    <li>Add interactive features without compromising functionality or accessibility.</li>
+                    <li>Use tools such as CSS Grid & Flexbox for creating complex, responsive layouts efficiently.</li>
+                    <li>Use contrast and spacing to guide users' attention to key content.</li>
+                    <li>Use proper tags for better structure, Search Engine Optimization, and screen reader compatibility.</li>
+                </ul>
+
+
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                <p>The Janet Web Accessibility Guidelines ensure that web pages are accessible, usable, and compliant with legal standards. The Feedback Form, Content Page, and Team Page comply with these regulations as shown below.</p>
+
+                <h3>Feedback Form Page:</h3>
+                <ul>
+                    <li>Accessible Forms: Labels, error messages linked with ARIA attributes, and keyboard navigation ensure usability.</li>
+                    <li>Validation: HTML5 validation and JavaScript real-time feedback improve user experience.</li>
+                    <li>Contrast: 
+                        <ul>
+                            <li>Text and background colors meet Web Content Accessibility Guidelines (WCAG) contrast ratios.</li>
+                            <li>Clearly visible focus states for interactive elements.</li>
+                        </ul>
+                    </li>
+                </ul>
+                    
+                <h3>Team Page</h3>
+                <ul>
+                    <li>Keyboard Accessibility: 
+                        <ul>
+                            <li>Team member cards are focusable.</li>
+                            <li>Hover effects are accessible via keyboard.</li>
+                            <li>Hidden details are revealed with ARIA attributes for screen readers.</li>
+                        </ul>
+                    </li>
+                    <li>Alt Text: Team member images include descriptive alt text for screen readers.</li>
+                    <li>Responsive Layout: Diamond grid layout is responsive and adjusts for smaller screens.</li>
+                </ul>
+
+                <h3>Content Page</h3>
+                <ul>
+                    <li>Semantic Structure: 
+                        <ul>
+                            <li>Proper use of header, main, and footer tags.</li>
+                            <li>Hierarchical use of h1 to h3 heading tags for better navigation and Search Engine Optimization.</li>
+                        </ul>
+                    </li>
+                    <li>Multimedia: 
+                        <ul>
+                            <li>Images have descriptive alt text and background video includes an overlay text with suffiecient contrast for readability.</li>
+                            <li>The side navigation is keyboard accessible, with focus states for links.</li>
+                        </ul>
+                    </li>
+                    <li>Responsive Design: Adapts to different screen sizes without overlapping, ensuring usability on mobile and desktop devices.</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>Carbon Footprint Ltd (2023) <i>Carbon Footprint Calculator.</i> Available at: <a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank">https://www.carbonfootprint.com/calculator.aspx</a> (Last accessed: 03 Mar 2025).</li>
+                        <li>FAO (2006) <i>Livestock's Long Shadow: Environmental Issues and Options.</i> Available at: <a href="http://www.fao.org/3/a0701e/a0701e.pdf" target="_blank">http://www.fao.org/3/a0701e/a0701e.pdf</a> (Last accessed: 05 Mar 2025).</li>
+                        <li>EPA (2023) <i>Reduce, Reuse, Recycle.</i> Available at: <a href="https://www.epa.gov/recycle" target="_blank">https://www.epa.gov/recycle</a> (Last accessed: 05 Mar 2025).</li>
+                        <li>United Nations (2023) <i>Sustainable Development Goal 13: Climate Action.</i> Available at: <a href="https://www.un.org/sustainabledevelopment/climate-action/" target="_blank">https://www.un.org/sustainabledevelopment/climate-action/</a> (Last accessed: 03 Mar 2025).</li>
+                        <li>Giphy (2023) <i>Giphy.</i> Available at: <a href="https://giphy.com/" target="_blank">https://giphy.com/</a> (Last accessed: 01 Mar 2025).</li>
+                        <li>Vecteezy (2023) <i>Vecteezy.</i> Available at: <a href="https://www.vecteezy.com/" target="_blank">https://www.vecteezy.com/</a> (Last accessed: 01 Mar 2025).</li>
+                        <li>Unsplash (2023) <i>Unsplash.</i> Available at: <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a> (Last accessed: 08 Mar 2025).</li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#feedback">Feedback page</a> </li>
+                        <li><a href="#team">Team page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!--Page Editors links & styling links-->
+            <h2>Page Editors</h2>
+            <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+            <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+            <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+            <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+         </div>
+         <div class="styling">
+            <h2>Links</h2>
+            <a href="style.css" target="_blank">General Page Styling</a>
+            <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+            <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+            <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+         </div>
+      
+         <!--Copyrights Informations-->
+         <div class="copyright">
+            <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+         </div>
+    </footer>
+</body>
+</html>

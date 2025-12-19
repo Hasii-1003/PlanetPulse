@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanetPulse: Feel the Pulse Act for the Planet 🌍</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to global CSS -->
+  <style>
+    /* Page Background with Gradient and Image */
+    body {
+      background-image: linear-gradient(rgba(230, 244, 241, 0.5), rgba(200, 230, 201, 0.5)), url(imgs3/feedbackground.png); /* Gradient overlay with background image */
+      background-size: cover; /* Ensure the background covers the entire page */
+      background-position: center; /* Center the background image */
+      font-family: serif; /* Set font family to serif for a classic look */
+      min-height: 100vh; /* Ensure the background covers the entire viewport height */
+    }
+
+    /* Feedback Form Styling */
+    .feedback-form {
+      max-width: 600px; /* Set maximum width for the form */
+      margin: 0 auto; /* Center the form horizontally */
+      padding: 50px; /* Add padding inside the form */
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      border-radius: 10px; /* Rounded corners for the form */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    .feedback-form h2 {
+      text-align: center; /* Center the heading */
+      color: #2c3e50; /* Set heading color */
+      margin-bottom: 20px; /* Add space below the heading */
+    }
+
+    /* GIF Section */
+    .gif-section {
+      text-align: center; /* Center the GIF */
+      margin-bottom: 20px; /* Add space below the GIF */
+    }
+
+    .gif-section img {
+      width: 100%; /* Make the GIF as wide as its container */
+      max-width: 600px; /* Set a maximum width for the GIF */
+      height: 100%; /* Maintain aspect ratio */
+      max-height: 600px; /* Set a smaller height for the GIF */
+      border-radius: 10px; /* Rounded corners for the GIF */
+    }
+
+    .feedback-form label {
+      display: block; /* Make labels block elements */
+      margin-bottom: 8px; /* Add space below labels */
+      font-weight: bold; /* Make labels bold */
+      color: #34495e; /* Set label color */
+    }
+
+    .feedback-form label.required::after {
+      content: " *"; /* Add asterisk for required fields */
+      color: red; /* Set asterisk color to red */
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form input[type="tel"],
+    .feedback-form textarea,
+    .feedback-form select {
+      width: calc(100% - 20px); /* Adjust width to fit within the border */
+      padding: 10px; /* Add padding inside input fields */
+      margin-bottom: 15px; /* Add space below input fields */
+      border: 1px solid #2F9794; /* Set border color */
+      border-radius: 5px; /* Rounded corners for input fields */
+      font-size: 16px; /* Set font size */
+      font-family: serif; /* Set font family to serif */
+    }
+
+    .feedback-form textarea {
+      resize: vertical; /* Allow vertical resizing of textarea */
+      height: 100px; /* Set initial height of textarea */
+    }
+
+    .feedback-form fieldset {
+      border: 2px solid #2F9794; /* Set border for fieldset */
+      border-radius: 5px; /* Rounded corners for fieldset */
+      padding: 15px; /* Add padding inside fieldset */
+      margin-bottom: 20px; /* Add space below fieldset */
+    }
+
+    .feedback-form legend {
+      font-weight: bold; /* Make legend text bold */
+      color: #2c3e50; /* Set legend text color */
+      padding: 0 10px; /* Add padding to legend */
+      background-color: rgba(255, 255, 255, 0.9); /* Add background to legend */
+      border: 1px solid #2F9794; /* Set border for legend */
+      border-radius: 5px; /* Rounded corners for legend */
+    }
+
+    /* Hearts Rating Logic */
+    .feedback-form .rating {
+      display: flex; /* Use flexbox for layout */
+      flex-direction: row-reverse; /* Reverse the order of hearts */
+      justify-content: space-between; /* Space hearts evenly */
+      margin-bottom: 20px; /* Add space below the rating */
+    }
+
+    .feedback-form .rating input[type="radio"] {
+      display: none; /* Hide the radio buttons */
+    }
+
+    .feedback-form .rating label {
+      font-size: 24px; /* Set heart size */
+      cursor: pointer; /* Change cursor to pointer on hover */
+      color: #ccc; /* Default color for unselected hearts */
+      transition: color 0.3s; /* Smooth color transition */
+      flex: 1; /* Distribute space evenly */
+      text-align: center; /* Center hearts within their space */
+    }
+
+    /* Color the selected heart and all hearts before it */
+    .feedback-form .rating input[type="radio"]:checked ~ label {
+      color: #44C4BE; /* Color for selected hearts */
+    }
+
+    /* Hover effect: Color the hovered heart and all hearts before it */
+    .feedback-form .rating label:hover,
+    .feedback-form .rating label:hover ~ label {
+      color: #44C4BE; /* Color for hovered hearts */
+    }
+
+    .feedback-form .buttons {
+      display: flex; /* Use flexbox for layout */
+      justify-content: space-between; /* Space buttons evenly */
+    }
+
+    .feedback-form .buttons button {
+      padding: 10px 20px; /* Add padding to buttons */
+      border: none; /* Remove button borders */
+      border-radius: 5px; /* Rounded corners for buttons */
+      font-size: 16px; /* Set button font size */
+      cursor: pointer; /* Change cursor to pointer on hover */
+      transition: background-color 0.3s; /* Smooth background transition */
+      font-family: serif; /* Set font family to serif */
+    }
+
+    .feedback-form .buttons button[type="submit"] {
+      background-color: #27ae60; /* Green background for submit button */
+      color: white; /* White text for submit button */
+    }
+
+    .feedback-form .buttons button[type="reset"] {
+      background-color: #e74c3c; /* Red background for reset button */
+      color: white; /* White text for reset button */
+    }
+
+    .feedback-form .buttons button:hover {
+      opacity: 0.9; /* Reduce opacity on hover */
+    }
+
+    .feedback-form .error-message {
+      color: #e74c3c; /* Red color for error messages */
+      font-size: 14px; /* Set font size for error messages */
+      margin-top: -10px; /* Adjust margin for error messages */
+      margin-bottom: 15px; /* Add space below error messages */
+      display: none; /* Hide error messages by default */
+    }
+
+    .feedback-form .char-counter {
+      font-size: 14px; /* Set font size for character counter */
+      color: #888; /* Gray color for character counter */
+      margin-top: -10px; /* Adjust margin for character counter */
+      margin-bottom: 15px; /* Add space below character counter */
+    }
+
+    /* Style for Checkbox and Radio Button Labels */
+    .feedback-form .checkbox-group,
+    .feedback-form .radio-group {
+      display: flex; /* Use flexbox for layout */
+      align-items: center; /* Vertically center the input and label */
+      margin-bottom: 10px; /* Add spacing between options */
+    }
+
+    .feedback-form .checkbox-group input[type="checkbox"],
+    .feedback-form .radio-group input[type="radio"] {
+      margin-right: 10px; /* Add spacing between the box and the label */
+      margin-bottom: 0; /* Remove any default margin */
+    }
+
+    .feedback-form .checkbox-group label,
+    .feedback-form .radio-group label {
+      margin-bottom: 0; /* Remove any default margin */
+    }
+
+    /* Custom hover color for checkboxes and radio buttons */
+    .feedback-form .checkbox-group input[type="checkbox"]:hover,
+    .feedback-form .radio-group input[type="radio"]:hover {
+      accent-color: #44C4BE; /* Change the hover color */
+    }
+
+    /* Custom hover color for pop-up list (select dropdown) */
+    .feedback-form select:hover {
+      border-color: #44C4BE; /* Change border color on hover */
+    }
+
+    .feedback-form select option:hover {
+      background-color: #44C4BE; /* Change background color on hover */
+      color: white; /* Change text color on hover */
+    }
+
+    /* Custom scrollbar for multi-select */
+    .feedback-form select[multiple] {
+      height: 120px; /* Set height for multi-select */
+      overflow-y: auto; /* Add vertical scrollbar */
+    }
+
+    .feedback-form select[multiple] option {
+      padding: 8px; /* Add padding to options */
+    }
+
+    /* Confirmation Message Styling */
+    #confirmation {
+      display: none; /* Hide confirmation message by default */
+      margin-top: 20px; /* Add space above confirmation message */
+      padding: 20px; /* Add padding inside confirmation message */
+      background-color: #e0f7fa; /* Light blue background */
+      border-radius: 5px; /* Rounded corners */
+      border: 1px solid #2F9794; /* Add border */
+      font-family: serif; /* Set font family to serif */
+    }
+
+    #confirmation h3 {
+      margin-top: 0; /* Remove default margin */
+      color: #2c3e50; /* Set heading color */
+    }
+
+    #confirmation pre {
+      white-space: pre-wrap; /* Preserve whitespace and wrap text */
+      word-wrap: break-word; /* Break long words */
+      background-color: #fff; /* White background */
+      padding: 10px; /* Add padding */
+      border-radius: 5px; /* Rounded corners */
+      border: 1px solid #ddd; /* Add border */
+    }
+
+    /* Make the datalist options more visible */
+    #suggestions {
+      width: 320px; /* Adjust height to make it more visible */
+      font-size: 15px; /* Increase font size for better readability */
+      font-family: serif;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Ensure dropdown is wide enough */
+    datalist {
+      max-height: 150px; /* Set max height */
+      overflow-y: auto; /* Enable scrolling if needed */
+    }
+
+
+    /* Styling for the file upload button */
+    .file-upload-button {
+      display: inline-block; /* Make button inline */
+      padding: 8px 16px; /* Add padding */
+      background-color: #44C4BE; /* Set button color */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Change cursor to pointer */
+      margin-bottom: 15px; /* Add space below button */
+      transition: background-color 0.3s; /* Smooth background transition */
+    }
+
+    .file-upload-button:hover {
+      background-color: #2F9794; /* Darker color on hover */
+    }
+
+    /* Styling for the uploaded file display */
+    .uploaded-file {
+      display: inline-block; /* Make file display inline */
+      padding: 8px 16px; /* Add padding */
+      background-color: #e0f7fa; /* Light blue background */
+      color: #2c3e50; /* Set text color */
+      border-radius: 5px; /* Rounded corners */
+      margin-bottom: 15px; /* Add space below file display */
+      border: 1px solid #2F9794; /* Add border */
+    }
+
+    .uploaded-file span {
+      margin-right: 10px; /* Add space between text and button */
+    }
+
+    .uploaded-file button {
+      background: none; /* Remove button background */
+      border: none; /* Remove button border */
+      color: #e74c3c; /* Red text for remove button */
+      cursor: pointer; /* Change cursor to pointer */
+      font-size: 14px; /* Set font size */
+    }
+
+    .uploaded-file button:hover {
+      text-decoration: underline; /* Underline text on hover */
+    }
+
+    /* Add space below the date-time input field */
+    #datetime {
+      margin-bottom: 15px; /* Adjust the spacing as needed */
+    }
+
+    /* Ensure the submission preview uses serif font */
+    #summary {
+      font-family: serif; /* Set font to serif */
+      font-size: 16px; /* Adjust font size if needed */
+      color: #2c3e50; /* Optional: Set text color for better readability */
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="imgs3/logo.png" alt="PlanetPulse logo" class="logo">
+        <div class="title-container">
+            <h1 class="title">PlanetPulse 🌍</h1>
+            <div class="subtitle-container">
+                <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet</span> 
+            </div>
+        </div>
+     </div>
+  </header>
+
+  <div class="banner">
+    <div class="navbar">
+        <ul>
+            <!-- Navigation links | add class="active" to indicate which page is active-->
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="volunteer.html" >Volunteer</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="user profile.html">Userprofile</a></li>
+        </ul> 
+    </div>
+</div>
+
+  <main>
+    <div class="feedback-form">
+      <!-- GIF Section -->
+      <div class="gif-section">
+        <img src="imgs3/feedbackgif.gif" alt="Loading GIF">
+      </div>
+
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <!-- Personal Details -->
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label for="full-name" class="required">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+          <label for="email" class="required">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <div class="error-message" id="email-error">Please enter a valid email address.</div>
+
+          <label for="phone" class="required">Telephone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your 10-digit phone number" required>
+          <div class="error-message" id="phone-error">Please enter a valid 10-digit phone number.</div>
+
+          <label for="address" class="required">Address:</label>
+          <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+        </fieldset>
+
+        <!-- Feedback Details -->
+        <fieldset>
+          <legend>Feedback Details</legend>
+          <label for="comment" class="required">Your Feedback:</label>
+          <textarea id="comment" name="comment" maxlength="500" placeholder="Enter your feedback (max 500 characters)" required></textarea>
+          <div class="char-counter" id="char-counter">500 characters remaining</div>
+
+          <!-- Popup List (Select Dropdown) -->
+          <label for="topic">Which environmental challenge do you think is the most urgent to address?</label>
+          <select id="topic" name="topic" required>
+          <option value="">Choose an option</option>
+          <option value="Climate Change">Climate Change</option>
+          <option value="Deforestation">Deforestation</option>
+          <option value="Plastic Pollution">Plastic Pollution</option>
+          <option value="Water Scarcity">Water Scarcity</option>
+          <option value="Loss of Biodiversity">Loss of Biodiversity</option>
+          </select>
+
+          <!-- Scrolling List (Multi-select) -->
+          <label for="interests">Which sustainable practices do you actively support or want to learn more about? (Select all that apply)</label>
+          <select id="interests" name="interests" multiple>
+          <option value="Renewable Energy">Renewable Energy (Solar, Wind, etc.)</option>
+          <option value="Recycling and Waste Management">Recycling and Waste Management</option>
+          <option value="Sustainable Agriculture">Sustainable Agriculture</option>
+          <option value="Eco-friendly Transportation">Eco-friendly Transportation</option>
+          <option value="Water Conservation">Water Conservation</option>
+          <option value="Tree Planting and Reforestation">Tree Planting and Reforestation</option>
+          <option value="Reducing Carbon Footprint">Reducing Carbon Footprint</option>
+          <option value="Supporting Environmental Policies">Supporting Environmental Policies</option>
+          </select>
+
+          <!-- Datalist (Searchable Input Field) -->
+          <label for="suggestions">What specific action do you believe can make the biggest impact on the environment?</label>
+          <input list="suggestions-list" id="suggestions" name="suggestions" placeholder="Choose or type a suggestion">
+          <datalist id="suggestions-list">
+          <option value="Switch to Renewable Energy">
+          <option value="Reduce Single-Use Plastics">
+          <option value="Plant More Trees">
+          <option value="Support Local and Sustainable Farming">
+          <option value="Use Public Transport or Carpool">
+          <option value="Advocate for Stronger Environmental Laws">
+          <option value="Educate Others About Sustainability">
+          <option value="Conserve Water at Home">
+          </datalist>
+
+          <!-- Upload File Option -->
+          <label for="attachment">Upload Attachment (Optional):</label>
+          <input type="file" id="attachment" name="attachment" style="display: none;">
+          <label for="attachment" class="file-upload-button">Choose File</label>
+          <div id="uploaded-file-container"></div>
+
+          <!-- Increased Space -->
+          <div style="margin-bottom: 20px;"></div>
+
+          <!-- Checkbox -->
+          <label>How did you hear about us? (Select all that apply):</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="social-media" name="source" value="Social Media">
+            <label for="social-media">Social Media</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="friend" name="source" value="Friend/Family">
+            <label for="friend">Friend/Family</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="news" name="source" value="News Article">
+            <label for="news">News Article</label>
+          </div>
+
+          <!-- Radio Button -->
+          <label>Would you recommend us to others?</label>
+          <div class="radio-group">
+            <input type="radio" id="yes" name="recommend" value="Yes" required>
+            <label for="yes">Yes</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="no" name="recommend" value="No">
+            <label for="no">No</label>
+          </div>
+
+          <!-- Date and Time Selection -->
+          <label for="datetime">Select Date and Time:</label>
+          <input type="datetime-local" id="datetime" name="datetime" required>
+
+          <!-- Hearts Rating -->
+          <label>How would you rate our website?</label>
+          <div class="rating">
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">&#10084;</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">&#10084;</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">&#10084;</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">&#10084;</label>
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">&#10084;</label>
+          </div>
+        </fieldset>
+
+        <!-- Feedback Submission Option -->
+        <fieldset>
+          <legend>Feedback Submission</legend>
+          <label>Would you like to send this feedback via email to the company?</label>
+          <div class="radio-group">
+            <input type="radio" id="send-email-yes" name="send-email" value="Yes">
+            <label for="send-email-yes">Yes</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="send-email-no" name="send-email" value="No" checked>
+            <label for="send-email-no">No</label>
+          </div>
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button type="submit">Submit Feedback</button>
+          <button type="reset">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Confirmation Message -->
+      <div id="confirmation">
+        <h3>Thank you for your feedback!</h3>
+        <p>Your details have been submitted successfully.</p>
+        <p><strong>Summary of your submission:</strong></p>
+        <pre id="summary"></pre>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2>
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+    </div>
+    <div class="styling">
+        <h2>Links</h2>
+        <a href="style.css" target="_blank">General Page Styling</a>
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+    </div>
+  
+    <!--Copyrights Informations-->
+    <div class="copyright">
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for dynamic validation and character counter
+document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent the form from submitting the traditional way
+
+  // Collect form data
+  const formData = new FormData(this);
+  const data = {}; // Object to store the collected form data
+
+  formData.forEach((value, key) => {
+    if (key === 'interests') {
+      // Convert selected multiple interests into a comma-separated string
+      data[key] = Array.from(formData.getAll(key)).join(', ');
+    } else if (key === 'source') {
+      // Convert selected multiple sources (checkbox values) into a comma-separated string
+      data[key] = Array.from(formData.getAll(key)).join(', ');
+    } else if (key === 'attachment') {
+      // Handle file attachment input
+      if (value.name) {
+        data[key] = `File: ${value.name} (${value.type})`; // Store file name and type
+      } else {
+        data[key] = 'No file uploaded'; // Indicate no file uploaded
+      }
+    } else {
+      // Store other form values as they are
+      data[key] = value;
+    }
+  });
+
+  // Display the collected data in the confirmation message
+  const summary = document.getElementById('summary');
+  let summaryText = '';
+
+  for (const [key, value] of Object.entries(data)) {
+    summaryText += `${key}: ${value}\n`; // Append each form field and its value
+  }
+
+  summary.textContent = summaryText; // Update the summary section with form data
+
+  // Show the confirmation message
+  document.getElementById('confirmation').style.display = 'block';
+
+  // Check if the user opted to send feedback via email
+  const sendEmail = document.getElementById('send-email-yes').checked;
+  if (sendEmail) {
+    // Construct the email content
+    const emailBody = `Feedback Details:\n\n${summaryText}`;
+    const emailSubject = 'Feedback Submission from PlanetPulse Website';
+    const companyEmail = 'planetpulseiit@gmail.com'; // Predefined company email
+
+    const userEmail = document.getElementById('email').value; // Retrieve user's email
+
+    // Combine company and user email for mailto functionality
+    const recipientEmails = `${companyEmail}, ${userEmail}`;
+
+    // Create a mailto link with subject and body content
+    const mailtoLink = `mailto:${recipientEmails}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open default email client with the mailto link
+    window.open(mailtoLink, '_blank');
+
+    // Notify the user to manually attach any uploaded file
+    const attachment = data['attachment'];
+    if (attachment !== 'No file uploaded') {
+      alert(`Please manually attach the file (${attachment}) in your email client before sending.`);
+    }
+  }
+});
+
+// Character counter for feedback textarea
+const comment = document.getElementById('comment');
+const charCounter = document.getElementById('char-counter');
+
+// Event listener to track and display remaining characters
+comment.addEventListener('input', function () {
+  const remaining = 500 - comment.value.length; // Calculate remaining characters
+  charCounter.textContent = `${remaining} characters remaining`; // Update counter display
+});
+
+// JavaScript for file upload display
+const fileInput = document.getElementById('attachment');
+const uploadedFileContainer = document.getElementById('uploaded-file-container');
+
+// Event listener to display selected file details
+fileInput.addEventListener('change', function () {
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0]; // Get the first uploaded file
+    uploadedFileContainer.innerHTML = `
+      <div class="uploaded-file">
+        <span>${file.name}</span>
+        <button type="button" onclick="removeFile()">Remove</button>
+      </div>
+    `;
+  } else {
+    uploadedFileContainer.innerHTML = ''; // Clear display if no file is selected
+  }
+});
+
+// Function to remove selected file and clear the display
+function removeFile() {
+  fileInput.value = ''; // Reset file input field
+  uploadedFileContainer.innerHTML = ''; // Clear displayed file details
+}
+  </script>
+</body>
+</html>

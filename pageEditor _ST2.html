@@ -1,0 +1,411 @@
+<!DOCTYPE html><!-- Declares the document type and version of HTML (HTML5) -->
+<html lang="en"> <!-- The root element of the page, and we're setting the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- This makes sure the browser understands special characters and symbols -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- This makes the page look good on phones and tablets -->
+    <link rel="stylesheet" href="style.css"><!-- This links our CSS file to style the page -->
+    <title>PlanetPulse: Page Editor - 02 🌍</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        main {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background: color #f4f4f4;;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color:#fafafa;
+        }
+        .ref li{
+            list-style: none;
+            padding-bottom: 9px;
+        }
+        .stud {
+            text-align: center;
+            line-height: 1.5px;
+            color: black;
+            margin-top: 10px;
+        }
+        .top {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+        
+        .top a {
+            padding: 10px 20px; /* Adds padding for button-like feel */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            text-decoration: none; /* Removes underline */
+            border-radius: 20px; /* Rounds the corners */
+            font-size: 12px; /* Adjust font size */
+            font-weight: bold; /* Make the text stand out */
+        }
+        .top a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        }
+
+    </style>
+</head>
+
+
+
+    <!--Header Section-->
+    <header id="top">
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <span style="margin-left: 700px;" class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+            </div>
+        </div>
+        
+    </header>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <li><a href="profile.html" >Userprofile</a></li>
+            </ul> 
+        </div>
+    </div>
+    <div class="stud">
+        <h2>Hasini Siriwardena - Student 02</h2>
+    </div>
+    <div class="container">
+        <!-- Main content area -->
+         <main>
+            <section>
+                <h2 id="template">Template</h2>
+                <h3>Technical Description:</h3>
+                <ol>
+                    <li>Header Section - <b>header</b></li>
+                        <ul style="list-style-type: disc;">
+                            <li>Includes a logo inside a <b>div</b> along with a title and subtitle inside a <b>div</b> </li>
+                        </ul>
+                    <li>Navigation Bar (<b>nav</b> Equivalent)</li> 
+                    <ul style="list-style-type: disc;">
+                        <li>The navigation bar is implemented inside a <b>div class="navbar"</b>, which contains an unordered list of links.</li>
+                        <li>The <b>target="_blank"</b> attribute ensures that links open in a new tab.</li>
+                    </ul>
+                    <li>Main Content</li>
+                    <ul style="list-style-type: disc;">
+                        <li>A large <b>h1</b> centered on the page provides a welcome message.</li>
+                    </ul>
+                    <li>Footer Section</li>
+                    <ul style="list-style-type: disc;"><li>The <b>footer</b> contains:</li>
+                        <ul>
+                            <li>Page Editors Links – Placeholder links to different page editors.</li>
+                            <li>Styling & Policy Links – Links to external CSS and policy pages.</li>
+                            <li>Copyright Information – Displays ownership details.</li>
+                        </ul>    
+                    </ul>
+                </ol>    
+                <h4>CSS Techniques</h4>
+                <ol>
+                    <li>Banner and Navigation Bar</li>
+                    <ul style="list-style-type: disc;">
+                        <li>width: 100%; height: 65px; background-color: rgb(31, 103, 101);</li>
+                        <ul><li>The navigation bar stretches across the screen with a greenish background.</li></ul>
+                        <li>.navbar ul li</li>
+                        <ul>
+                            <li>Displays menu items inline using display: inline-block;</li>
+                            <li>The position: relative; allows for the hover effect.</li>
+                        </ul>
+                    </ul>
+                    <li> Logo and Title Styling.</li>
+                    <ul style="list-style-type: disc;">
+                        <li>.logo</li>
+                        <ul><li>The logo is positioned absolutely at the top-left.</li></ul>
+                        <li>.title-container</li>
+                        <ul><li>Uses display: flex; justify-content: center; to align elements properly.</li></ul>
+                        <li>.subtitle</li>
+                        <ul><li>Uses position: absolute; to place text below the title.</li></ul>
+                    </ul>
+                    <li>Hover Effects (Navbar & Footer)</li>
+                    <ul style="list-style-type: disc;"><li>The navbar has an underline effect</li></ul>
+                    <li>Footer Styling</li>
+                    <ul style="list-style-type: disc;">
+                        <li>.footer-content and .styling</li>
+                        <ul>
+                            <li>Uses background-color for contrast.</li>
+                            <li>text-align: center; for better alignment.</li>
+                        </ul>
+                    </ul>
+                    <li>Media Queries (Responsive Design)</li>
+                    <ul style="list-style-type: disc;"><li>Adjust font sizes for smaller screens.</li></ul>
+                </ol>
+                <h3>Link to template -</h3>
+                <p><a href="template1.html">Template</a></p>
+            </section>
+
+            <section>
+                <h2 id="Homepage">Homepage</h2>
+                <h3>Technical Description:</h3>
+                <ul>
+                <li>The <b>img</b> tag is used throughout the page to display the logo, content images, and section visuals.</li>
+                <li>CSS styles are applied to control the size, border-radius, and placement of images.</li>
+                <li>Buttons for "Read More" use <b>a</b>> tags styled with .blog-btn to look like buttons.</li>
+                </ul>
+                
+                <h3>CSS Techniques:</h3>
+            
+                    <ul>
+                        <li>The .about-us, .mission, and .contents-container sections are designed with flexbox to center content and align elements properly.</li>
+                        <li>The .contents-container uses display: flex; to arrange the content cards horizontally.</li>
+                        <li>max-width, margin: auto, and text-align: center are used to make elements responsive.</li>
+                        <li>The backdrop-filter: blur(10px); effect adds a glassmorphism look to .about-us.</li>
+                        <li>The .about-us:hover effect scales the section slightly when hovered.</li>
+                        <li>.blog-btn:hover changes the background color and text color for interaction feedback.</li>
+                        <li>.card-contents:hover changes the border color.</li>
+                        <li>Shadows: Used in .about-us, .card-contents, and .blog-btn to create depth.</li>
+                        <li>Borders: Rounded corners are added to elements.</li>
+                        <li>A consistent teal, blue, and white color scheme is maintained throughout the website.</li>
+                    </ul>
+                <h3>Accessibility</h3>
+                <ul>
+                    <li>Alt Text for Images with descriptions</li>
+                    <li>Semantic HTML (header, nav, section, footer)</li>
+                    <li>Proper Heading Order.</li>
+                    <li>Buttons with Hover Effects</li>
+                    <li>Use Contrast Ratios</li>
+                </ul>  
+                <h3>Link to the validation page -</h3>
+                <p><a href="validation _ST2.html#HomeVal">Validation</a></p>
+                <h3>Link to Homepage -</h3>
+                <p><a href="home.html">Homepage</a></p> 
+            </section>
+
+
+            <section>
+                <h2 id="Table">Table</h2>
+                <h3>Technical Description:</h3>
+                <ul>
+                    <li><b>table</b>: Displays structured data.</li>
+                    <li><b>th</b> and <b>td</b>: Used for column headers and table data</li>
+                    <li>Uses JavaScript (document.querySelectorAll('.expandable-row')) to toggle visibility of hidden <b>tr</b> elements.</li>
+                    <li>Clicking on a row expands/collapses additional content.</li>
+                    <li>Unicode Emojis are used to make the table visually engaging.</li>
+                    <li><b>span class="icon">✔span</b>: Represents status indicators.</li>
+                </ul>
+
+                <h3>CSS Techniques:</h3>
+                <ul>
+                    <li>width: 100%; border-collapse: collapse;: Ensures the table spans the full width and removes extra spacing between borders.</li>
+                    <li>box-shadow: 0 4px 8px rgb(1, 55, 17);: Adds depth with a shadow effect.</li>
+                    <li>background-color: rgb(140, 208, 160);: Sets a background color.</li>
+                    <li>th { position: sticky; top: 0; }: Keeps table headers visible during scrolling.</li>
+                    <li>tr:hover { background-color: #f2f6bb; transition: background-color 0.3s ease; }: Smooth hover effect.</li>
+                    <li>
+                        .progress-bar:
+                        <ul style="list-style-type: square;">
+                            <li>Uses a div inside another div to represent the progress.</li>
+                            <li>Background is white (background-color: white;).</li>
+                            <li>Inner bar changes width dynamically (style="width: 75%;"). </li>
+                        </ul>
+                    </li>    
+                    <li>Expandable Table Rows
+                        <ul style="list-style-type: square;">
+                            <li>.expandable-content { display: none; }: Initially hidden.</li>
+                            <li>JavaScript toggles display: table-row; when a user clicks an expandable row</li>
+                        </ul>
+                    </li>
+                    <li>Interactive Tooltip
+                        <ul style="list-style-type: square;">
+                            <li>CSS Classes: .tooltip and .tooltiptext</li>
+                            <li>Hidden by default (visibility: hidden;)</li>
+                            <li>Becomes visible on hover (visibility: visible; opacity: 1;).</li>
+                            <li>Positioned above the hovered element</li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <h3>Accessibility</h3>
+                <ul>
+                    <li>aria-label="Climate Action Dashboard" provides better navigation for assistive technologies.</li>
+                    <li>Sticky Table Headers (position: sticky; top: 0;): Keeps column headers visible when scrolling.</li>
+                    <li>Alternating row colors (tr:nth-child(even)): Improves readability.</li>
+                    <li>Hover effect (tr:hover): Highlights rows when hovered.</li>
+                </ul>
+                <h3>Link to the validation page -</h3>
+                <p><a href="validation _ST2.html#TableVal">Validation</a></p>
+                <h3>Link to Table -</h3>
+                <p><a href="Table.html">Table</a></p>
+            </section>
+
+
+            <section>
+                <h2 id="content">Content Page 02</h2>
+                <h3>Technical Description</h3>
+                <ol>
+                    <li> Title & Text Section</li>
+                    <ul>
+                        <li>The <b>h3</b> tag is used to display the title in the center</li>
+                        <li>The title font is large and colored to stand out.</li>
+                    </ul>
+                    <li>Image Elements</li>
+                    <ul>
+                        <li><b>img</b> tags display images with specific sizes and styles.</li>
+                        <li>Each image is wrapped in a <b>div</b> or <b>figure</b> to provide consistent spacing.</li>
+                        <li>Hover effects (:hover) are added using CSS for interactive visuals.</li>
+                    </ul>
+                    <li>Image Slider</li>
+                    <ul>
+                        <li>Uses a container <b>div</b> to hold multiple <b>img</b> elements.</li>
+                        <li>CSS animations (@keyframes slide) create a smooth transition effect.</li>
+                        <li>overflow: hidden; ensures only the current image is visible.</li>
+                    </ul>
+                    <li>Video Background</li>
+                    <ul>
+                        <li>Uses the <b>video</b> tag with attributes like autoplay, muted, and loop</li>
+                        <li>A separate <b>div</b> is positioned over the video to display text overlays.</li>
+                        <li>The object-fit: cover; property ensures the video covers the entire section without distortion.</li>
+                    </ul>
+                    <li> Play/Pause Video Functionality</li>
+                    <ul>
+                        <li>Used JavaScript to check if the video is playing or paused.</li>
+                        <li>A button allows users to toggle playback with one click.</li>
+                    </ul>
+                </ol>
+
+
+                <h3>CSS Techniques:</h3>
+                <ul>
+                    <li>color: black; or a dark shade ensures high contrast for readability</li>
+                    <li>padding and margin are used to create proper spacing between elements.</li>
+                    <li>border: 3px solid #color; adds a frame around images.</li>
+                    <li>transition: 0.3s ease-in-out; ensures a smooth hover effect</li>
+                    <li>On hover (:hover), the image changes color, rotates, or enlarges slightly.</li>
+                    <li>The slider container has position: relative; overflow: hidden; to control image flow.</li>
+                    <li>@keyframes are used to animate the images, making them slide automatically.</li>
+                    <li>The <b>video</b> is positioned absolute inside a container to act as a background</li>
+                    <li>The text overlay is styled using position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);.</li>
+                    <li>z-index ensures the text appears above the video</li>
+                </ul>
+
+                <h3>Accessibility</h3>
+                <ul>
+                    <li>Screen Reader-Friendly (Semantic HTML, alt text, labels)</li>
+                    <li>Keyboard Accessible (Tab navigation, focus styles)</li>
+                    <li>High Contrast & Readability (Dark mode, scalable fonts)</li>
+                    <li>Responsive for All Devices (Works on mobile, desktops, screen magnifiers)</li>
+                    <li>Motion Sensitivity Considerations (No forced animations)</li>
+                    <li>Accessible Multimedia (Captions, transcripts, proper controls)</li>
+                </ul>
+                <h3>Link to the validation page -</h3>
+                <p><a href="validation _ST2.html#contentVal">Validation</a></p>
+                <h3>Link to Content page 02 -</h3>
+                <p><a href="content_ST2.html">Content page 02</a></p>
+            </section>
+
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <ol>
+                        <li>Making sure the page looks good on all screen sizes (mobile, tablet, and desktop)</li>
+                        <li>Handling Accessibility</li>
+                        <li>Ensuring consistent font sizes, colors, and spacing across all pages.</li>
+                        <li> Making the content engaging and easy to read.</li>
+                        <li>Creating a smooth, responsive image slider that works well on all devices.</li>
+                    </ol> 
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance</h2>
+                    <p>While creating my website, I made sure it followed Janet regulations by focusing on legal compliance, security, and appropriate content use.To comply with data protection laws like GDPR, I included a Privacy Policy page explaining how user data is collected and used. Even though my site doesn’t collect much data, I still mentioned things like cookies to ensure transparency. I also created a Terms of Use page to outline user responsibilities and prevent misuse.</p> 
+                    <p>I also followed Janet’s Acceptable Use Policy by keeping my content truthful, ethical, and free from copyrighted material. I made sure all images and text were either my own or royalty-free. Additionally, I considered basic accessibility by using clear headings and readable fonts, though I could improve this by adding alt text for images.</p>
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>DESIGN.COM <i>Design.com</i> Available at: <a href="#">https://www.design.com/</a> (Last accessed: 13 Feb 2025).</li>
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 23 Feb 2025).</li>
+                        <li>Pinterest Available at: <a href="#">https://www.pinterest.com/</a> (Last accessed: 28 Feb 2025).</li>
+                        <li>sutterstock Available at: <a href="#">https://www.shutterstock.com/</a>(Last accessed: 02 March 2025).</li>
+                        <li>Lecture Slides</li>
+                        <ul>
+                            <li>Lecture Notes - Week1. Available at: <a href="https://learning.westminster.ac.uk/ultra/courses/_100151_1/outline/edit/document/_5174768_1?courseId=_100151_1&view=content&state=view">Link to week 1 lecture notes</a></li>
+                            <li>Lecture Notes - Week2. Available at:<a href="https://learning.westminster.ac.uk/ultra/courses/_100151_1/outline/edit/document/_5174770_1?courseId=_100151_1&view=content&state=view">Link to week 2 lecture notes</a></li>
+                            <li>Lecture Notes - Week3. Available at:<a href="https://learning.westminster.ac.uk/ultra/courses/_100151_1/outline/edit/document/_5174772_1?courseId=_100151_1&view=content&state=view">Link to week 3 lecture notes</a></li>
+                        </ul>
+                    </ul>
+            </section>
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+         </main>
+         <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="#Homepage">Home page </a></li>
+                        <li><a href="#Table">Table page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+
+<!--Main Footer-->
+<footer>
+    <div class="footer-content">
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2>
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+    </div>
+    <div class="styling">
+        <h2>Links</h2>
+        <a href="style.css" target="_blank">General Page Styling</a>
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+    </div>
+
+    <!--Copyrights Informations-->
+    <div class="copyright">
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+    </div>
+</footer>    
+
+
+
+
+
+
+
+
+
+

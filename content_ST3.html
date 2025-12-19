@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanetPulse: Feel the Pulse Act for the Planet 🌍</title>
+    <link rel="stylesheet" href="style.css"> <!-- External Global CSS -->
+    <style>
+        /* Additional styling for the content page */
+        main {
+            padding-bottom: 100px; /* Add padding to the bottom of the main content */
+        }
+
+        .content-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 220px; /* Add padding to avoid overlap with side navigation */
+        }
+
+        .content-header h1 {
+            font-size: 36px;
+            color: #1f6765; /* Matching the banner color */
+            margin-bottom: 10px;
+        }
+
+        .content-header h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .content-section {
+            margin-bottom: 60px; /* Increased margin for more space below */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 220px; /* Add margin to avoid overlap with side navigation */
+            margin-right: 220px; /* Add margin to center the content */
+        }
+
+        /* Different colors for each subtopic section */
+        #know-your-impact {
+            background-color: #e0f7fa; /* Light blue */
+            border-left: 5px solid #1f6765; /* Matching the banner color */
+        }
+
+        #live-lightly {
+            background-color: #f0f4c3; /* Light green */
+            border-left: 5px solid #8bc34a; /* Green */
+        }
+
+        #think-bigger {
+            background-color: #ffe0b2; /* Light orange */
+            border-left: 5px solid #ff9800; /* Orange */
+        }
+
+        #track-and-celebrate {
+            background-color: #ffccbc; /* Light red */
+            border-left: 5px solid #ff5722; /* Red */
+        }
+
+        .content-section h2 {
+            font-size: 28px;
+            color: #1f6765; /* Matching the banner color */
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-section ul li {
+            margin-bottom: 10px;
+            font-size: 18px; /* Increase bullet point size */
+        }
+
+        .content-section a {
+            color: #1f6765; /* Matching the banner color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+
+        .content-section em {
+            font-style: italic;
+            color: #555;
+        }
+
+        .content-section strong {
+            color: #1f6765; /* Matching the banner color */
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px 220px; /* Add padding to avoid overlap with side navigation */
+        }
+
+        .call-to-action a {
+            background-color: #1f6765;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .call-to-action a:hover {
+            background-color: #41a07d; /* A lighter shade of the banner color */
+        }
+
+        /* Side Navigation Bar */
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background-color: rgba(31, 103, 101, 0.9); /* Matching the banner color with transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border: 2px solid #fff; /* Add border to make it stand out */
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-nav ul li {
+            margin-bottom: 10px;
+        }
+
+        .side-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .side-nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+            transform: translateX(10px); /* Move text slightly to the right on hover */
+        }
+
+        /* Go to top button */
+        .go-to-top {
+            position: fixed;
+            bottom: 100px; /* Adjusted position */
+            right: 20px;
+            background-color: #1f6765;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border: 2px solid #fff; /* Add border to make it stand out */
+        }
+
+        .go-to-top:hover {
+            background-color: #41a07d; /* A lighter shade of the banner color */
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 1500px;
+            height: 500px;
+            overflow: hidden;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Add space below the video */
+        }
+
+        .video-container video {
+            position: absolute;
+            display:block;
+            margin: auto;
+            top: 0;
+            left: 300px;
+            width: 950px;
+            height: 500px;
+            object-fit: cover;
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        .overlay-text {
+          position: absolute;
+          top: 50%;
+          left: 68%;
+          transform: translate(-50%, -50%);
+          color: white; /* Changed to white for better contrast */
+          font-size: 35px;
+          font-weight: bold; /* Make the text bold */
+          text-align: right;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+          padding: 10px;
+          border-radius: 8px;
+          line-height: 1.5; /* Improve line spacing */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+      }
+
+      /* Gradient overlay for the video border */
+    .video-border-overlay {
+        position: absolute;
+        top: 0;
+        left: 300px; /* Match the video's left position */
+        width: 950px; /* Match the video's width */
+        height: 500px; /* Match the video's height */
+        background: linear-gradient(45deg, rgba(31, 103, 101, 0.5), rgba(41, 128, 125, 0.5)); /* Gradient using the banner color */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        z-index: -1; /* Place it behind the video */
+        box-shadow: 0 0 20px rgba(31, 103, 101, 0.7); /* Optional: Add a shadow for depth */
+    }
+
+        /* Adjustments for overlapping */
+        .content-section:last-child {
+            margin-bottom: 200px; /* Increased margin to avoid overlapping with footer */
+        }
+
+        /* Background Design */
+        body {
+            background: #f8f8e8; /* Light background color */
+        }
+
+        /* Image Grid for Carbon Footprint Visuals */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between images */
+    margin: 20px 0; /* Add margin above and below the grid */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.image-item {
+    flex: 1 1 calc(50% - 20px); /* Two images per row with gap */
+    max-width: calc(50% - 20px); /* Ensure images don't exceed half the container width */
+    text-align: center; /* Center the image and caption */
+}
+
+.image-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.image-caption {
+    margin-top: 10px; /* Space between image and caption */
+    font-size: 16px; /* Caption font size */
+    color: #555; /* Caption text color */
+    font-style: italic; /* Italicize captions */
+}
+
+/* Smaller Image for carbonfootprint1.png */
+.smaller-image {
+    width: 40%; /* Adjust as needed */
+    height: 40%; /* Maintain aspect ratio */
+    max-width: 300px; /* Optional: Set a maximum width */
+}
+
+/* Adjust Slideshow Size */
+.slideshow {
+    width: 100%;
+    max-width: 400px; /* Reduced width */
+    height: 400px; /* Reduced height */
+    margin: 20px auto; /* Center the slideshow */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    animation: slide 12s infinite; /* 4 seconds per image */
+    height: 100%; /* Ensure slides take full height of the slideshow */
+}
+
+.slides img {
+    width: 100%;
+    height: 100%; /* Ensure images take full height of the slideshow */
+    object-fit: cover; /* Ensure images cover the slideshow area */
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0%, 33.33% { transform: translateX(0%); } /* First image */
+    33.33%, 66.66% { transform: translateX(-100%); } /* Second image */
+    66.66%, 100% { transform: translateX(-200%); } /* Third image */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+      <div class="logo-container">
+        <img src="imgs3/logo.png" alt="PlanetPulse logo" class="logo">
+        <div class="title-container">
+            <h1 class="title">PlanetPulse 🌍</h1>
+            <div class="subtitle-container">
+                <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+            </div>
+        </div>
+     </div>
+    </header>
+    
+    <div class="banner">
+      <div class="navbar">
+          <ul>
+              <!-- Navigation links | add class="active" to indicate which page is active-->
+              <li><a href="home.html" >Home</a></li>
+            <li><a href="volunteer.html" >Volunteer</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="user profile.html">Userprofile</a></li>
+          </ul> 
+      </div>
+    </div>
+
+    <main>
+        <!-- Video Background -->
+        <div class="video-container">
+          <!-- Gradient overlay for the video border -->
+          <div class="video-border-overlay"></div>
+          <video autoplay muted loop playsinline>
+              <source src="imgs3/contentvid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">
+              <b>Stepping Lightly:<br> Tackling Carbon Footprints<br> for a Greener Tomorrow</b>
+          </div>
+      </div>
+
+        <!-- Side Navigation Bar -->
+        <div class="side-nav">
+            <ul>
+                <li><a href="#know-your-impact">Know Your Impact</a></li>
+                <li><a href="#live-lightly">Live Lightly</a></li>
+                <li><a href="#think-bigger">Think Bigger</a></li>
+                <li><a href="#track-and-celebrate">Track and Celebrate</a></li>
+            </ul>
+        </div>
+
+        <!-- Subtopic 1: Know Your Impact -->
+<div id="know-your-impact" class="content-section">
+  <h2>Know Your Impact: Understanding Carbon Footprints</h2>
+  <p>Your carbon footprint is the total amount of greenhouse gases (like CO₂) generated by your actions. It’s time to understand how your daily choices impact the planet.</p>
+  
+  <!-- Image Grid for Carbon Footprint Visuals -->
+  <div class="image-grid">
+      <div class="image-item">
+          <img src="imgs3/carbonfootprint1.png" alt="Carbon Footprint Factors: Water, Emissions, CO₂, Fuel, Personnel, Gas, Recycling, Waste, Electricity, Transport, Offsets" class="smaller-image">
+          <p class="image-caption">Factors contributing to your carbon footprint.</p>
+      </div>
+      <div class="image-item">
+          <img src="imgs3/carbonfootprint2.png" alt="CO₂ Emissions">
+          <p class="image-caption">CO₂ emissions are a major part of your carbon footprint.</p>
+      </div>
+      <div class="image-item">
+          <img src="imgs3/carbonfootprint4.png" alt="The impact of vehicles on CO₂ emissions">
+          <p class="image-caption">The impact of vehicles on CO₂ emissions.</p>
+      </div>
+  </div>
+
+  <ul>
+      <li><strong>Did you know?</strong> The average global carbon footprint is about <strong>4 tons per person</strong>, but in developed countries, it can be as high as <strong>16 tons</strong>!</li>
+      <li>Transportation, energy use, and food production are the biggest contributors to individual carbon footprints.</li>
+  </ul>
+  <div>
+      <p><strong>Fun Fact:</strong> If everyone reduced their carbon footprint by just <strong>10%</strong>, it would be equivalent to taking <strong>100 million cars</strong> off the road annually!</p>
+  </div>
+  <p><em>"We do not inherit the Earth from our ancestors; we borrow it from our children."</em> – Native American Proverb</p>
+  <p><strong>Take Action:</strong> Use a <a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank">carbon footprint calculator</a> to measure your impact.</p>
+</div>
+
+<!-- Subtopic 2: Live Lightly -->
+<div id="live-lightly" class="content-section">
+  <h2>Live Lightly: Everyday Actions for a Smaller Footprint</h2>
+  <p>Small changes in your daily life can add up to a big difference. Here’s how you can start:</p>
+  
+  <!-- Slideshow for Reduce Carbon Images -->
+  <div class="slideshow">
+      <div class="slides">
+          <img src="imgs3/reducecarbonimg3.jpg" alt="Reduce Carbon Image 1">
+          <img src="imgs3/reducecarbonimg2.jpg" alt="Reduce Carbon Image 2">
+          <img src="imgs3/reducecarbonimg1.png" alt="Reduce Carbon Image 3">
+      </div>
+  </div>
+
+  <ul>
+      <li><strong>At Home:</strong> Switch to LED bulbs, unplug devices when not in use, and opt for renewable energy sources like solar panels.</li>
+      <li><strong>On the Move:</strong> Walk, bike, or use public transport. If you drive, consider an electric or hybrid vehicle.</li>
+      <li><strong>On Your Plate:</strong> Eat more plant-based meals. Did you know that <strong>14.5%</strong> of global greenhouse gas emissions come from livestock farming?</li>
+  </ul>
+  <div>
+      <p><strong>Did You Know?</strong> If every American skipped meat and cheese just <strong>one day a week</strong>, it would be like taking <strong>7.6 million cars</strong> off the road!</p>
+  </div>
+  <p><em>"The greatest threat to our planet is the belief that someone else will save it."</em> – Robert Swan</p>
+</div>
+
+        <!-- Subtopic 3: Think Bigger -->
+        <div id="think-bigger" class="content-section">
+            <h2>Think Bigger: Beyond Personal Choices</h2>
+            <p>While individual actions matter, collective efforts can drive systemic change. Here’s how you can make a bigger impact:</p>
+            
+            <!-- Campaign Image -->
+    <div class="image-grid">
+      <div class="image-item">
+          <img src="imgs3/campaignimg1.png" alt="Campaign for Change">
+          <p class="image-caption">Join campaigns for systemic change.</p>
+      </div>
+  </div>
+            
+            <ul>
+                <li><strong>Waste Not:</strong> Reduce, reuse, and recycle. Composting organic waste can cut landfill emissions by <strong>30%</strong>.</li>
+                <li><strong>Advocate for Change:</strong> Support policies that promote renewable energy, sustainable transportation, and climate action.</li>
+                <li><strong>Spread the Word:</strong> Share your journey on social media and inspire others to join the movement.</li>
+            </ul>
+            <div>
+                <p><strong>Fact:</strong> Recycling one ton of paper saves <strong>17 trees</strong> and <strong>7,000 gallons of water</strong>!</p>
+            </div>
+            <p><em>"Alone we can do so little; together we can do so much."</em> – Helen Keller</p>
+        </div>
+
+        <!-- Subtopic 4: Track and Celebrate -->
+        <div id="track-and-celebrate" class="content-section">
+            <h2>Track and Celebrate: Your Journey to a Greener Future</h2>
+            <p>Reducing your carbon footprint is a journey, not a destination. Celebrate your progress and keep going!</p>
+            
+            <!-- Tracking Image -->
+    <div class="image-grid">
+      <div class="image-item">
+          <img src="imgs3/tracking1.png" alt="Track Your Progress">
+          <p class="image-caption">Track your progress toward a greener future.</p>
+      </div>
+  </div>
+            
+            <ul>
+                <li>Set achievable goals, like reducing energy use by <strong>10%</strong> in the next year.</li>
+                <li>Use apps or journals to track your progress and stay motivated.</li>
+                <li>Share your achievements with friends and family to inspire them.</li>
+            </ul>
+            <div>
+                <p><strong>Did You Know?</strong> If every household in the U.S. replaced one incandescent bulb with an LED, it would prevent <strong>9 billion pounds</strong> of greenhouse gas emissions annually!</p>
+            </div>
+            <p><em>"Progress is impossible without change."</em> – George Bernard Shaw</p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="call-to-action">
+            <h2>Start Today: Take One Step Toward a Lighter Footprint!</h2>
+            <p>Ready to make a difference? Begin your journey now and inspire others to join you.</p>
+            <a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank">Calculate Your Carbon Footprint</a>
+        </div>
+
+        <!-- Go to Top Button -->
+        <a href="#top" class="go-to-top">↑</a>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2>
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+     </div>
+     <div class="styling">
+        <h2>Links</h2>
+        <a href="style.css" target="_blank">General Page Styling</a>
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+     </div>
+  
+     <!--Copyrights Informations-->
+     <div class="copyright">
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+     </div>
+    </footer>
+</body>
+</html>

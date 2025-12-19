@@ -1,0 +1,426 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
+<head> <!-- Begins the head section, which contains meta-information about the document -->
+  <title>Containt page-student 04</title> 
+  <link rel="stylesheet" href="style.css"> <!-- Links an external CSS file for styling -->
+  <style>
+    .containt_body {
+      font-family: serif; 
+      margin: 0; 
+      padding: 0; 
+      background-color: #f4f7fb; 
+      width: 100%; 
+      overflow-x: hidden; 
+    }
+    .video-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .video-container {
+            height: 200px; /* Adjust for smaller screens */
+            }
+        }
+        .overlay-text {
+            position: absolute;
+            font-family: serif;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(1, 13, 13);
+            font-size: 68px;
+            text-align: center;
+        }
+    .containt_header { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 15px; 
+      background-color: #58ba5b;
+      color: white;
+      width: 100%;
+      box-sizing: border-box; 
+    }
+    .h_1 {
+      font-size: 35px;
+      margin: 0; 
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%; 
+    }
+    nav { 
+      background-color: #2e7d32; 
+      padding: 10px; 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+      display: flex; 
+      justify-content: center; 
+      overflow-x: auto; 
+      white-space: nowrap; 
+      width: 100%; 
+      box-sizing: border-box; 
+      margin: auto; 
+    }
+    nav a { 
+      color: white; 
+      padding: 10px 15px; 
+      text-decoration: none; 
+      font-size: 18px; 
+      margin-right: 10px; 
+      flex: 0 0 auto; 
+      white-space: nowrap; 
+    }
+    nav a:hover {
+      background-color: #388e3c;
+      border-radius: 5px; 
+    }
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+    nav { 
+      -ms-overflow-style: none; 
+      scrollbar-width: none; 
+    }
+    .go-to-top { 
+      position: fixed; 
+      bottom: 20px;
+      right: 20px; 
+      background-color: #4CAF50; 
+      color: white; 
+      padding: 15px;
+      border: none; 
+      border-radius: 50%; 
+      cursor: pointer; 
+      font-size: 1.5em; 
+      display: none; 
+    }
+    .go-to-top:hover { 
+      background-color: #388e3c; 
+    }
+    main { 
+      padding: 20px; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+    
+    h3 { 
+      color: black; 
+      font-size: 1.8em; 
+    }
+    h4 { 
+      color: whitesmoke; 
+      font-size: 1.5em; 
+    }
+    .role-container { 
+      text-align: center; 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 20px; 
+    }
+    .role-header { 
+      font-size: 2em; 
+      font-weight: bold; 
+      margin-bottom: 20px; 
+    }
+    .role-content { 
+      font-size: 1.1em; 
+      line-height: 1.6; 
+      color: #333; 
+    }
+    .subtopic { 
+      display: flex; 
+      align-items: center; 
+      padding: 20px; 
+      margin-bottom: 20px; 
+      border-radius: 5px; 
+    }
+    .subtopic:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+    .subtopic img { 
+      max-width: 500px; 
+      height: auto; 
+      border-radius: 5px; 
+      margin-right: 20px; 
+    }
+    .subtopic .content {
+      font-family: serif;
+      width: 60%; 
+      color: rgb(7, 0, 0); 
+    }
+    .subtopic p { 
+      font-size: 1.1em; 
+      color: rgb(21, 17, 17); 
+      line-height: 1.6; 
+    }
+    .subtopic ul li { 
+      font-size: 1.1em; 
+      color: rgb(21, 17, 17); 
+      line-height: 1.6; 
+    }
+    .card-contents { 
+      border: 2px solid transparent; 
+      box-shadow: 0 4px 8px 0 rgb(3, 83, 67); 
+      height: 650px; 
+      width: 300px; 
+      margin: auto; 
+      margin-bottom: 50px; 
+      text-align: center; 
+      background-color: rgb(2, 59, 4); 
+      border-radius: 15px; 
+      font-family: serif;
+    }
+    .card-contents img { 
+      max-width: 250px; 
+      height: 300px; 
+      padding-top: 20px; 
+      border-radius: 15px; 
+      padding-left: 10px; 
+      padding-right: 10px; 
+      width: 100%; 
+      border-radius: 10px; 
+    }
+    .card-contents p { 
+      color: white; 
+      font-size: 15px; 
+      padding-bottom: 5px; 
+      margin-bottom: 3px; 
+    }
+    .contents-container { 
+      display: flex; 
+      justify-content: center; 
+      gap: 30px; 
+    }
+    .card-contents:hover { 
+      border-color: goldenrod; 
+    }
+  </style> 
+</head>
+<body> 
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="PlanetPulse logo" class="logo">
+      <div class="title-container">
+        <h1 class="title">PlanetPulse 🌍</h1>
+        <div class="vertical-line"></div> 
+        <div class="subtitle-container"> 
+          <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span>  
+        </div>
+      </div>
+    </div>
+  </header>  
+  <div class="banner">  
+    <div class="navbar">  
+      <ul>  
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <li><a href="user profile.html" >Userprofile</a></li>
+      </ul> 
+    </div> 
+  </div>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+        <source src="containt_v.mp4" type="video/mp4">
+        
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay-text">
+      <b>We Face a Huge Challenge <br>but Already Know Many Solutions</b>
+    </div>
+</div>
+  
+    <nav> 
+      <a href="#challenges">Identifying the Major Challenges</a> 
+      <a href="#sollutions">Existing Solutions and Innovations</a>
+      <a href="#barriers">Barriers to Implementing Solutions</a> 
+      <a href="#role">The Role of Collaboration in Solving Global Challenges</a> 
+    </nav> 
+    <p style="font-size:20px;; text-align: justify;font-family: Arial, Helvetica, sans-serif;"> 
+      In a world grappling with complex global issues, it’s clear that we face significant challenges.
+      However, the good news is that many solutions already exist. This topic explores the problems we face, the solutions at our disposal,
+      the barriers to implementation, and the power of collaboration to drive meaningful change.
+      Below, we break down the key subtopics to provide a deeper understanding of how we can turn challenges into opportunities.
+    </p> 
+    <div id="challenges" class="subtopic"> 
+      <div class="image"> 
+        <img src="img_s_ 4/challenges.png" alt="challenges"> 
+      </div> 
+      <div class="content"> 
+        <h3>Identifying the Major Challenges</h3> 
+        <p> 
+          The first step in solving any problem is understanding its scope and impact.<br>
+          Today, we face a range of pressing challenges, from climate change and environmental degradation to social inequality,
+          technological disruption, and public health crises. <br>
+          These issues are interconnected and often exacerbate one another, creating a complex web of problems that require urgent attention.
+          By identifying the root causes and consequences of these challenges, we can better prioritize solutions and allocate resources effectively.<br>
+        </p> 
+      </div> 
+    </div> 
+    <div id="solutions" class="subtopic"> 
+      <div class="image"> 
+        <img src="img_s_ 4/solutions.png" alt="solutions"> 
+      </div> 
+      <div class="content"> 
+        <h3>Existing Solutions and Innovations</h3> 
+        <p> 
+          While the challenges are daunting, humanity has already developed a wealth of solutions and innovations to address them.<br>
+          From renewable energy technologies and sustainable agricultural practices to digital tools for education and healthcare,
+          many of these solutions are already making a difference.<br>
+          Additionally, policy frameworks like the Paris Agreement and grassroots initiatives such as community-led conservation
+          projects demonstrate that progress is possible. This subtopic highlights these existing solutions and showcases how they<br>
+          can be scaled up for greater impact.<br>
+        </p> 
+      </div> 
+    </div> 
+    <div id="barriers" class="subtopic"> 
+      <div class="image"> 
+        <img src="img_s_ 4/barriers.png" alt="barriers"> 
+      </div> 
+      <div class="content"> 
+        <h3>Barriers to Implementing Solutions</h3> 
+        <p> 
+          While many solutions exist, several obstacles prevent their widespread adoption.<br>
+          Understanding these barriers is crucial to overcoming them and achieving meaningful progress.
+        </p> 
+        <ul> 
+          <li>Political Barriers 
+            <ul> 
+              <li>Lack of government support or political will.</li> 
+              <li>Conflicting policies or regulations across regions.</li> 
+              <li>Short-term political agendas that prioritize immediate gains over long-term solutions.</li> 
+            </ul> 
+          </li> 
+          <li>Economic Barriers 
+            <ul> 
+              <li>High costs of implementing new technologies or systems.</li> 
+              <li>Unequal distribution of resources and funding.</li> 
+              <li>Financial instability or lack of investment in developing regions</li> 
+            </ul> 
+          </li> 
+          <li>Social and Cultural Barriers 
+            <ul> 
+              <li>Resistance to change from individuals or communities.</li> 
+              <li>Deep-rooted cultural norms that conflict with new solutions.</li> 
+              <li>Lack of awareness or education about the benefits of proposed solutions.</li> 
+            </ul> 
+          </li> 
+        </ul> 
+      </div> 
+    </div> 
+    <div id="role" class="subtopic"> 
+      <div class="role-container"> 
+        <h3 class="role-header">The Role of Collaboration in Solving Global Challenges</h3> 
+        <p class="role-content"> 
+          No single entity can solve global challenges alone. Collaboration is key to driving large-scale, sustainable change.
+          This subtopic emphasizes the importance of partnerships across sectors, regions, and communities to tackle these issues effectively.
+        </p> 
+      </div> 
+    </div> 
+    <div class="contents-container"> 
+      <div class="card-contents"> 
+        <img src="img_s_ 4/Cross-Sector.png" alt="Cross-Sector" style="width: 100%;"> 
+        <h4>Cross-Sector Partnerships</h4> 
+        <p class="blog-cards"> 
+          Collaboration between governments, businesses, and nonprofit organizations can unlock resources, expertise,
+          and innovation. For example, public-private partnerships have been instrumental in advancing renewable energy<br>
+          projects and improving access to healthcare in underserved areas.
+        </p> 
+      </div> 
+      <div class="card-contents"> 
+        <img src="img_s_ 4/Grassroots.png" alt="Grassroots" style="width: 100%;"> 
+        <h4>Grassroots Movements and Community Engagement</h4> 
+        <p class="blog-cards"> 
+          Local communities and grassroots initiatives often lead the way in creating sustainable solutions. <br>
+          From urban gardening projects to community-based recycling programs, these efforts demonstrate the power of collective action at the ground level.<br>
+        </p> 
+      </div> 
+      <div class="card-contents"> 
+        <img src="img_s_ 4/global.png" alt="global" style="width: 100%;"> 
+        <h4>Global Cooperation and Policy Alignment</h4> 
+        <p class="blog-cards"> 
+          Many challenges, such as climate change and pandemics, transcend national borders. <br>
+          Global cooperation and aligned policies are essential to address these issues effectively.
+          International agreements and organizations play a critical role in fostering collaboration and ensuring<br>
+          that solutions are implemented on a global scale.
+        </p> 
+      </div> 
+    </div> 
+    <p style="font-size: 20px; text-align: center;font-family: Arial, Helvetica, sans-serif;"> 
+      While the challenges we face are immense, the solutions are within reach.
+      By identifying the problems, leveraging existing innovations, addressing barriers, and fostering collaboration,
+      we can create a more sustainable and equitable future.
+      The key lies in collective action and a shared commitment to turning challenges into opportunities for growth and progress.
+    </p> 
+  </div> 
+  <button class="go-to-top" onclick="window.scrollTo(0, 0);">↑</button> 
+  <script> 
+    // Get the button
+    const goToTopButton = document.querySelector('.go-to-top');
+  
+    // Show the button when the user scrolls down 200px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        goToTopButton.style.display = 'block'; 
+      } else {
+        goToTopButton.style.display = 'none'; 
+      }
+    };
+  
+    // Scroll to the top when the button is clicked
+    goToTopButton.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    };
+    window.onscroll = function() { 
+        let button = document.querySelector(".go-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+  
+      function scrollToTop() { 
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+  </script> 
+  <!--Main Footer-->
+<footer><!-- The footer is the bottom part of the page, usually for extra info and links -->
+  <div class="footer-content"><!-- A container for the footer content -->
+      <!--Page Editors links & styling links-->
+      <h2>Page Editors</h2><!-- Heading for the Page Editors section -->
+
+      <!-- Placeholder link for Page Editors-->
+      <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+      <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+      <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+      <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+  </div>
+  <div class="styling"><!-- A container for styling and policy links -->
+      <h2>Links</h2><!-- Heading for the "Links" section -->
+      <a href="style.css" target="_blank">General Page Styling</a><!-- Link to the CSS file -->
+      <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a><!-- Link to the Privacy Policy -->
+      <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a><!-- Link to the Terms and Conditions -->
+      <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p><!-- A disclaimer note -->
+  </div>
+
+  <!--Copyrights Informations-->
+  <div class="copyright"><!-- A container for the copyright notice -->
+      <p>&copy; 2025 PlanetPulse. All rights reserved.</p><!-- Copyright text -->
+  </div>
+</footer>
+</body>
+
+</html> 

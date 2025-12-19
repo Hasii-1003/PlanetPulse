@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
+    
+    <title>sitemap student 4</title> <!-- Page title -->
+
+    <style>
+        /* General body styling */
+        .sitemap_body {
+            font-family: Arial, sans-serif; /* Set font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background: linear-gradient(to bottom, #e0f7fa, #a5d6a7); /* Gradient background */
+            display: flex; /* Flexbox for centering content */
+            flex-direction: column; /* Stack children vertically */
+            align-items: center; /* Center horizontally */
+            min-height: 100vh; /* Full viewport height */
+        }
+
+        /* Sitemap container styling */
+        .text-svg {
+            flex: 1; /* Take up remaining space */
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 100%; /* Full width */
+            max-width: 1600px; /* Increased max-width for better spacing */
+            margin: 20px 0; /* Margin for spacing */
+            font-family: serif; /* Font family for text */
+        }
+
+        /* SVG styling */
+        svg {
+            width: 100%; /* Full width */
+            height: auto; /* Auto height to maintain aspect ratio */
+            max-width: 1600px; /* Increased max-width for better spacing */
+        }
+
+        /* Node styling */
+        .node {
+            fill: #558b2f; /* Default fill color */
+            stroke: #33691e; /* Stroke color */
+            stroke-width: 2px; /* Stroke thickness */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: fill 0.3s; /* Smooth transition for fill color */
+            pointer-events: all; /* Ensure the element responds to pointer events */
+        }
+
+        .node:hover {
+            fill: #33691e; /* Change fill color on hover */
+        }
+
+        /* Text inside nodes */
+        text {
+            font-size: 20px; /* Increased font size for better readability */
+            fill: white; /* Text color */
+            pointer-events: none; /* Disable pointer events for text */
+            text-anchor: middle; /* Center text horizontally */
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            display: none; /* Hidden by default */
+            position: absolute; /* Position relative to the viewport */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white; /* Text color */
+            padding: 5px; /* Padding for spacing */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 14px; /* Font size */
+            white-space: nowrap; /* Prevent text wrapping */
+            pointer-events: none; /* Disable pointer events */
+        }
+
+        /* Line styling */
+        line {
+            stroke: white; /* Line color */
+            stroke-width: 4; /* Line thickness */
+            transition: stroke 0.3s, stroke-width 0.3s, stroke-dasharray 0.3s; /* Smooth transition */
+        }
+
+        line:hover {
+            stroke: goldenrod; /* Change line color on hover */
+            stroke-width: 8; /* Increase line thickness on hover */
+            stroke-dasharray: 10, 5; /* Create a dashed line (10px dash, 5px gap) */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo"> <!-- Logo image -->
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1> <!-- Main title -->
+                <div class="vertical-line"></div> <!-- Vertical line for design -->
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> <!-- Subtitle -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html" >Sitemap</a></li>
+                <li><a href="table.html" >Table</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="user profile.html" >Userprofile</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sitemap Section -->
+    <div class="sitemap_body">
+        <div class="text-svg">
+            <div class="tooltip" id="tooltip"></div> <!-- Tooltip for hover effects -->
+            <svg viewBox="0 0 2000 1300"> <!-- SVG container for sitemap -->
+                <!-- Lines connecting nodes -->
+                
+                <line x1="800" y1="500" x2="1200" y2="300" /> <!-- Home to Page Editor -->
+                <line x1="800" y1="500" x2="400" y2="700" /> <!-- Home to Profile -->
+                <line x1="800" y1="500" x2="1200" y2="700" /> <!-- Home to Content -->
+                <line x1="800" y1="500" x2="800" y2="60" /> <!-- Home to Validate -->
+                <line x1="800" y1="500" x2="800" y2="800" /> <!-- Home to Sitemap -->
+                <line x1="800" y1="500" x2="600" y2="700" /> <!-- Home to Volunteer -->
+                <line x1="1200" y1="300" x2="1000" y2="500" /> <!-- Page Editor to Student 1 -->
+                <line x1="1200" y1="300" x2="1200" y2="500" /> <!-- Page Editor to Student 2 -->
+                <line x1="1200" y1="300" x2="1400" y2="500" /> <!-- Page Editor to Student 3 -->
+                <line x1="1200" y1="300" x2="1600" y2="500" /> <!-- Page Editor to Student 4 -->
+                <line x1="1200" y1="700" x2="1000" y2="900" /> <!-- Content to Student 1 Content -->
+                <line x1="1200" y1="700" x2="1200" y2="900" /> <!-- Content to Student 2 Content -->
+                <line x1="1200" y1="700" x2="1400" y2="900" /> <!-- Content to Student 3 Content -->
+                <line x1="1200" y1="700" x2="1600" y2="900" /> <!-- Content to Student 4 Content -->
+                <line x1="800" y1="60" x2="600" y2="250" /> <!-- Validate to Student 1 Validate -->
+                <line x1="800" y1="60" x2="800" y2="250" /> <!-- Validate to Student 2 Validate -->
+                <line x1="800" y1="60" x2="1000" y2="150" /> <!-- Validate to Student 3 Validate -->
+                <line x1="800" y1="60" x2="1200" y2="150" /> <!-- Validate to Student 4 Validate -->
+                <line x1="800" y1="500" x2="400" y2="500" /> <!-- Home to Splash Screen -->
+
+                <!-- Nodes for each page -->
+                <!-- Home Page Node -->
+                <a href="home.html" tabindex="0" aria-label="Home Page">
+                    <circle class="node" cx="800" cy="500" r="80" data-tooltip="Home Page - Navigate to main page" />
+                    <text x="800" y="505">Home</text>
+                </a>
+
+                
+
+                <!-- Page Editor Node -->
+                <a href="page-editor.html" tabindex="0" aria-label="Page Editor">
+                    <circle class="node" cx="1200" cy="300" r="70" data-tooltip="Look how good we are" />
+                    <text x="1200" y="305">Page Editor</text>
+                </a>
+
+                <!-- Child Nodes for Students -->
+                <a href="#" tabindex="0">
+                    <circle class="node" cx="1000" cy="500" r="50" data-tooltip="Look how good is student 1" />
+                    <text x="1000" y="505">Student 01</text>
+                </a>
+
+                <a href="pageEditor _ST2.html" tabindex="0">
+                    <circle class="node" cx="1200" cy="500" r="50" data-tooltip="Look how good is student 2" />
+                    <text x="1200" y="505">Student 02</text>
+                </a>
+
+                <a href="pageEditor _ST3.html" tabindex="0">
+                    <circle class="node" cx="1400" cy="500" r="50" data-tooltip="Look how good is student 3" />
+                    <text x="1400" y="505">Student 03</text>
+                </a>
+
+                <a href="pageEditor _ST4.html" tabindex="0">
+                    <circle class="node" cx="1600" cy="500" r="50" data-tooltip="Look how good is student 4" />
+                    <text x="1600" y="505">Student 04</text>
+                </a>
+
+                <!-- Profile Node -->
+                <a href="user profile.html" tabindex="0" aria-label="Profile">
+                    <circle class="node" cx="400" cy="700" r="70" data-tooltip="Manage and update your personal user profile." />
+                    <text x="400" y="705">Profile</text>
+                </a>
+
+                <!-- Splash Screen Node -->
+                <a href="Splash Screen.html" tabindex="0" aria-label="Splash Screen">
+                    <circle class="node" cx="400" cy="500" r="70" data-tooltip="Splash screen of the website." />
+                    <text x="400" y="505">Splash Screen</text>
+                </a>
+
+                <!-- Sitemap Node -->
+                <a href="sitemap.html" tabindex="0" aria-label="Sitemap">
+                    <circle class="node" cx="800" cy="800" r="70" data-tooltip="View the sitemap of the website." />
+                    <text x="800" y="805">Sitemap</text>
+                </a>
+
+                <!-- Volunteer Node -->
+                <a href="volunteer.html" tabindex="0" aria-label="voluenteer">
+                    <circle class="node" cx="600" cy="750" r="70" data-tooltip="Voluenteer actions and days." />
+                    <text x="600" y="760">voluenteer</text>
+                </a>
+
+                <!-- Content Node -->
+                <a href="content.html" tabindex="0" aria-label="Content">
+                    <circle class="node" cx="1200" cy="700" r="70" data-tooltip="Read insightful articles." />
+                    <text x="1200" y="705">Content</text>
+                </a>
+
+                <!-- Student Content Nodes -->
+                <a href="#" tabindex="0">
+                    <circle class="node" cx="1000" cy="900" r="50" data-tooltip="Student 1 content" />
+                    <text x="1000" y="905">Student 01</text>
+                </a>
+
+                <a href="content_ST2.html" tabindex="0">
+                    <circle class="node" cx="1200" cy="900" r="50" data-tooltip="Student 2 content" />
+                    <text x="1200" y="905">Student 02</text>
+                </a>
+
+                <a href="content_ST3.html" tabindex="0">
+                    <circle class="node" cx="1400" cy="900" r="50" data-tooltip="Student 3 content" />
+                    <text x="1400" y="905">Student 03</text>
+                </a>
+
+                <a href="content_ST4.html" tabindex="0">
+                    <circle class="node" cx="1600" cy="900" r="50" data-tooltip="Student 4 content" />
+                    <text x="1600" y="905">Student 04</text>
+                </a>
+
+                <!-- Validate Node -->
+                <a href="validate.html" tabindex="0" aria-label="Validate">
+                    <circle class="node" cx="800" cy="60" r="70" data-tooltip="Validation checker" />
+                    <text x="800" y="65">Validate</text>
+                </a>
+
+                <!-- Student Validate Nodes -->
+                <a href="" tabindex="0">
+                    <circle class="node" cx="600" cy="250" r="50" data-tooltip="Student 1 validation" />
+                    <text x="600" y="255">Student 1</text>
+                </a>
+
+                <a href="validation _ST2.html" tabindex="0">
+                    <circle class="node" cx="800" cy="250" r="50" data-tooltip="Student 2 validation" />
+                    <text x="800" y="255">Student 2</text>
+                </a>
+
+                <a href="validation_ST3.html" tabindex="0">
+                    <circle class="node" cx="1000" cy="150" r="50" data-tooltip="Student 3 validation" />
+                    <text x="1000" y="155">Student 3</text>
+                </a>
+
+                <a href="validation_ST04.html" tabindex="0">
+                    <circle class="node" cx="1200" cy="150" r="50" data-tooltip="Student 4 validation" />
+                    <text x="1200" y="155">Student 4</text>
+                </a>
+            </svg>
+        </div>
+    </div>
+
+   
+   <!--Main Footer-->
+<footer><!-- The footer is the bottom part of the page, usually for extra info and links -->
+    <div class="footer-content"><!-- A container for the footer content -->
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2><!-- Heading for the Page Editors section -->
+
+        <!-- Placeholder link for Page Editors-->
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+    </div>
+    <div class="styling"><!-- A container for styling and policy links -->
+        <h2>Links</h2><!-- Heading for the "Links" section -->
+        <a href="style.css" target="_blank">General Page Styling</a><!-- Link to the CSS file -->
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a><!-- Link to the Privacy Policy -->
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a><!-- Link to the Terms and Conditions -->
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p><!-- A disclaimer note -->
+    </div>
+
+    <!--Copyrights Informations-->
+    <div class="copyright"><!-- A container for the copyright notice -->
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p><!-- Copyright text -->
+    </div>
+</footer>
+</body>
+    <!-- Tooltip Script -->
+    <script>
+        const tooltip = document.getElementById("tooltip"); // Get tooltip element
+
+        // Add event listeners to all nodes for tooltip functionality
+        document.querySelectorAll(".node").forEach(node => {
+            node.addEventListener("mouseenter", event => {
+                tooltip.textContent = event.target.getAttribute("data-tooltip"); // Set tooltip text
+                tooltip.style.display = "block"; // Show tooltip
+            });
+            node.addEventListener("mousemove", event => {
+                tooltip.style.left = event.pageX + 10 + "px"; // Position tooltip horizontally
+                tooltip.style.top = event.pageY + 10 + "px"; // Position tooltip vertically
+            });
+            node.addEventListener("mouseleave", () => {
+                tooltip.style.display = "none"; // Hide tooltip
+            });
+        });
+    </script>
+</body>
+</html>

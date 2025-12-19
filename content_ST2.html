@@ -1,0 +1,432 @@
+<!DOCTYPE html><!-- Declares the document type and version of HTML (HTML5) -->
+<html lang="en"> <!-- The root element of the page, and we're setting the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- This makes sure the browser understands special characters and symbols -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- This makes the page look good on phones and tablets -->
+    <link rel="stylesheet" href="style.css"><!-- This links our CSS file to style the page -->
+
+    <title>Content- S02 🌍</title>
+    <style>
+        /*General Styling*/
+        body{
+            background-color:  #f8f8e8;/* Sets the background color of the page */
+            font-family: serif;/* Sets the default font for the page */
+            color: black;
+            line-height: 1.6;/* Adjusts the spacing between lines of text */
+            text-transform: capitalize;/* Capitalizes the first letter of each word */
+        }    
+        h3{
+            font-family: 'serif';/* Sets the font for h3 headings */
+            font-size: 50px;/* Sets the font size for h3 headings */
+            text-align: center;
+            color: rgb(3, 62, 60);
+          
+        }
+        
+        p{
+            font-family: 'serif'; /* Sets the font for paragraphs */
+            font-size: 18px; /* Sets the font size for paragraphs */
+            text-align: center; /* Centers the text */
+        }
+        .H1-container{
+            background: rgb(145, 222, 145); /* Sets the background color for the container */
+            padding: 20px 20px; /* Adds padding inside the container */
+            text-align: center; /* Centers the text */
+            max-width: 1100px; /* Sets the maximum width of the container */
+            margin: 0 auto; /* Centers the container horizontally */
+        }
+        .slider {
+            padding: 10px; /* Adds padding inside the slider */
+            background: rgb(9, 67, 77); /* Sets the background color of the slider */
+            text-align: center; /* Centers the content */
+            position: relative; /* Allows for positioning child elements */
+            max-width: 500px; /* Sets the maximum width of the slider */
+            height: 450px; /* Sets the height of the slider */
+            overflow: hidden; /* Hides any content that overflows the slider */
+            border-radius: 1px; /* Rounds the corners of the slider */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+            margin-left: 480px; /* Moves the slider to the right */
+            margin-top: 50px; /* Adds space above the slider */
+        }
+        .slides {
+            display: flex; /* Makes the slides display in a row */
+            width: 500px; /* Sets the width of the slides container */
+            animation: slide 20s infinite; /* Adds a sliding animation */
+
+        }
+        .slide {
+            width: 500px; /* Sets the width of each slide */
+            flex-shrink: 0; /* Prevents the slides from shrinking */
+        }
+        .slide img {
+            height: 450px; /* Sets the height of the images */
+            width: 500px; /* Sets the width of the images */
+            display: block; /* Ensures the images display as blocks */
+        }
+        .sec1, .sec2,.sec3, .sec4{
+            margin-top: 20px; /* Adds space above each section */
+            margin-bottom: 20px; /* Adds space below each section */
+            padding: 15px; /* Adds padding inside each section */
+            border: 1px solid #10191b; /* Adds a border around each section*/
+            background-color: rgb(189, 228, 184);
+        }
+         /* Keyframes for Slider Animation */
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            20% { transform: translateX(0%); } /* Pause on first image */
+            25% { transform: translateX(-100%); } /* Move to second image */
+            45% { transform: translateX(-100%); } /* Pause on second image */
+            50% { transform: translateX(-200%); } /* Move to third image */
+            70% { transform: translateX(-200%); } /* Pause on third image */
+            75% { transform: translateX(-300%); } /* Move to fourth image */
+            95% { transform: translateX(-300%); } /* Pause on fourth image */
+            100% { transform: translateX(0%); } /* Reset to first image */
+        }
+        .unordered-con{
+            font-size: 22px; /* Sets the font size for the unordered list */
+            list-style: none; /* Removes the default bullet points */
+            text-align: center; /* Centers the list items */
+        }  
+
+        .unordered-con li a{
+            text-decoration: none; /* Removes the underline from links */
+            color: #147431; /* Sets the link color */
+        }
+        .unordered-con li a:hover{
+            text-decoration: none; /* Ensures no underline on hover */
+            color: #8b2506; /* Changes the link color on hover */
+
+        }
+        .back-to-top{
+            color: #147431; /* Sets the text color */
+            font-size: 22px; /* Sets the font size */
+            display: flex; /* Makes the container a flexbox */
+            justify-content: center; /* Centers the content horizontally */
+        }
+        .top {
+            position: fixed; /* Fixes the button in place */
+            bottom: 5%; /* Positions the button 5% from the bottom */
+            right: 5%; /* Positions the button 5% from the right */
+        }
+        
+        .top a {
+            padding: 10px 20px; /* Adds padding for button-like feel */
+            background-color:green; /* Button color */
+            color: white; /* Text color */
+            text-decoration: none; /* Removes underline */
+            border-radius: 20px; /* Rounds the corners */
+            font-size: 12px; /* Adjust font size */
+            font-weight: bold; /* Make the text stand out */
+        }
+        .top a:hover {
+            background-color: gold; /* Darker shade on hover */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        }
+        .video-container {
+            position: relative; /* Allows for positioning child elements */
+            width: 100%; /* Sets the width of the container */
+            height: 400px; /* Sets the height of the container */
+            overflow: hidden; /* Hides any content that overflows */
+        }
+        video {
+            width: 100%; /* Sets the width of the video */
+            height: 100%; /* Sets the height of the video */
+            object-fit: cover; /* Ensures the video covers the container */
+        }
+        @media (max-width: 768px) {
+            .video-container {
+            height: 200px; /* Adjust for smaller screens */
+            }
+        }
+        .overlay-text {
+            position: absolute; /* Positions the text over the video */
+            font-family: serif; /* Sets the font for the text */
+            top: 50%; /* Positions the text 50% from the top */
+            left: 50%; /* Positions the text 50% from the left */
+            transform: translate(-50%, -50%); /* Centers the text */
+            color: rgb(237, 244, 244); /* Sets the text color */
+            font-size: 68px; /* Sets the font size */
+            text-align: center; /* Centers the text */
+        }
+
+        
+
+
+
+    </style>
+</head>
+
+
+<body>
+    <!--Header Section-->
+    <header id="top">
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <li><a href="user profile.html">Userprofile</a></li>
+            </ul> 
+        </div>
+    </div>
+    
+    <div class="video-container">
+        <video autoplay muted loop playsinline><!-- The video element -->
+            <source src="v2.mp4" type="video/mp4"><!-- Video source (MP4 format) -->
+            <source src="v2.ogg" type="video/ogg"><!-- Video source (OGG format) -->
+            Your browser does not support the video tag. <!-- Fallback text if the video doesn't load -->
+        </video>
+        <div class="overlay-text">
+            Renewable Energy:<br> The Future of Sustainability
+        </div>
+    </div>
+    <!-- Contents Navigation -->
+    <div class="contents-para"><!-- A container for the contents navigation -->
+        <ul class="unordered-con"><!-- An unordered list for the contents links -->
+          <li><a href="#intro">What is Renewable Energy?</a></li>
+          <li><a href="#Solar">--- Solar Energy --- </a></li>
+          <li><a href="#Wind">--- Wind Energy ---</a></li>
+          <li><a href="#Hydro" >--- Hydropower ---</a></li>
+          <li><a href="#Biomass">--- Biomass Energy ---</a></li>
+          <li><a href="#benefits">Benefits of Renewable Energy</a></li>
+          <li><a href="#challenges">Challenges & Solutions</a></li>
+          <li><a href="#Circular">Circular Economy & Waste Reduction</a></li>
+       </ul>
+    </div>   
+    <!--Inroduction Section-->
+    <section class="H1">
+    <div class="H1-container">
+        <h2 id="intro" style="font-size: 30px;text-align: center;color:  rgb(4, 4, 56);">What is Renewable Energy?</h2>
+        <p style="color: rgb(4, 95, 4);">Renewable energy refers to energy sources that are naturally replenished and sustainable over time. Unlike fossil fuels, which deplete and contribute to pollution, renewable energy sources are clean and environmentally friendly.</p>
+    </div>
+    </section>
+
+    <!-- Types of Renewable Energy Section-->
+    <h3 id="Solar">--- Solar Energy ---</h3>
+    <div class="slider"><!-- A container for the slider -->
+        <div class="slides"> <!-- A container for the slides -->
+          <div class="slide"><!-- A single slide -->
+            <img src="imgS2/pw7.png" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="imgS2/pw10.png" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="imgS2/pw6.png" alt="Image 3">
+          </div>
+          <div class="slide">
+            <img src="imgS2/pw2.png" alt="Image 4">
+          </div>
+        </div>
+    </div>
+        <div class="sec1">
+                <p>Solar energy is a renewable source of power that is harnessed from the sun’s radiation. It is captured using solar panels, which contain photovoltaic (PV) cells that convert sunlight into electricity. This electricity can be used immediately, stored in batteries, or fed into the power grid.</p>
+                <p id="SolarEnergy" style="text-align: left;margin-left: 10px;font-size: 25px;color: rgb(120, 28, 9);"><strong>How Solar Energy Works</strong></p>
+                <ol style="font-size: 16px;"><!-- An ordered list for the steps -->
+                    <li>Sunlight Absorption – Solar panels absorb sunlight using photovoltaic cells.</li>
+                    <li>Electricity Generation – The absorbed light excites electrons, creating direct current (DC) electricity.</li>
+                    <li>Conversion to Usable Power – An inverter converts DC electricity into alternating current (AC), which powers homes and businesses.</li>
+                    <li>Energy Storage or Grid Use – Excess energy can be stored in batteries or sent to the electrical grid.</li>
+                </ol>
+        </div>
+
+                <h3 id="Wind">--- Wind Energy ---</h3><!-- Heading for the Wind Energy section -->
+                <div class="slider">
+                    <div class="slides">
+                      <div class="slide">
+                        <img src="imgS2/pw1.png" alt="Image 1">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw8.png" alt="Image 2">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw9.png" alt="Image 3">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw11.png" alt="Image 4">
+                      </div>
+                    </div>
+                </div>
+                <div class="sec2">
+
+                    <p>Wind energy is a renewable energy source that harnesses the power of moving air to generate electricity. It is captured using wind turbines, which convert kinetic energy from the wind into mechanical power, which is then transformed into electricity through a generator.</p>
+                    <p id="WindEnergy" style="text-align: left;margin-left: 10px;font-size: 25px;color: rgb(120, 28, 9);"><strong>How Wind Energy Works</strong></p>
+                    <ol style="font-size: 16px;">
+                        <li>Wind Turns the Blades – As the wind blows, it moves the large blades of a wind turbine.</li>
+                        <li>Rotation Generates Power – The blades are connected to a rotor, which spins a shaft inside the turbine.</li>
+                        <li>Electricity Production – The shaft is connected to a generator that converts mechanical energy into electricity.</li>
+                        <li>Energy Distribution – The electricity can be used directly, stored in batteries, or sent to the power grid.</li>
+                    </ol>
+                </div>
+
+                <h3 id="Hydro">--- Hydropower ---</h3>
+                <div class="slider">
+                    <div class="slides">
+                      <div class="slide">
+                        <img src="imgS2/pw3.png" alt="Image 1">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw12.png" alt="Image 2">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw13.png" alt="Image 3">
+                      </div>
+                      <div class="slide">
+                        <img src="imgS2/pw14.png" alt="Image 4">
+                      </div>
+                    </div>
+                </div>
+                <div class="sec3">
+
+                    <p>Hydropower, also known as hydroelectric power, is a renewable energy source that generates electricity by using the movement of water. It is one of the oldest and most widely used forms of renewable energy. The energy from flowing or falling water is captured and converted into mechanical energy, which is then transformed into electricity using a generator.</p>
+                    <p id="Hydropower" style="text-align: left;margin-left: 10px;font-size: 25px;color: rgb(120, 28, 9);"><strong>How Hydropower Works</strong></p>
+                    <ol style="font-size: 16px;">
+                        <li>Water Flow is Controlled – A dam or reservoir stores water and releases it in a controlled manner.</li>
+                        <li>Turbine Rotation – The flowing water turns large turbines.</li>
+                        <li>Electricity Generation – The turbines are connected to generators that convert mechanical energy into electricity.</li>
+                        <li>Power Distribution – The generated electricity is transmitted to homes, businesses, and industries.</li>
+                    </ol>
+                </div>    
+
+                    
+                <h3 id="Biomass">--- Biomass Energy ---</h3>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="imgS2/pw5.png" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="imgS2/pw16.png" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="imgS2/pw15.png" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="imgS2/pw17.png" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sec4">
+
+                    <p>Biomass energy is a renewable energy source that comes from organic materials like plants, wood, agricultural waste, and even animal manure. It is one of the oldest sources of energy, traditionally used for heating and cooking. Modern biomass energy is converted into electricity, biofuels, or biogas to power homes, businesses, and vehicles.</p>
+                    <p id="BiomassEnergy" style="text-align: left;margin-left: 10px;font-size: 25px;color: rgb(120, 28, 9);"><strong>How Biomass Energy Works</strong></p>
+                    <ol style="font-size: 16px;">
+                        <li>Collection of Biomass – Organic materials such as wood, crops, and waste are gathered.
+                            <ul>
+                                <li>Combustion 🔥 – Burning biomass to generate heat and electricity.</li>
+                                <li>Gasification 💨 – Converting biomass into synthetic gas (syngas) for energy production.</li>
+                                <li>Anaerobic Digestion 🦠 – Breaking down organic waste to produce biogas (methane).</li>
+                                <li>Fermentation 🍶 – Converting plant material into biofuels like ethanol and biodiesel.</li>
+                            </ul>
+                        </li>
+                        <li>Conversion Process – Biomass is converted into usable energy through different methods.</li>
+                        <li>Energy Utilization – The produced energy is used for heating, electricity generation, or fuel for transportation.</li>
+                    </ol>
+                </div>   
+
+    <!-- Benefits Section -->
+    <div id="benefits" class="section">
+        <h2 style="font-size: 25px;text-align: center;color:  rgb(7, 149, 142);">Benefits of Renewable Energy</h2>
+        <ul style="font-size: 16px;">
+            <li><strong>Environmental Impact:</strong> Reduces greenhouse gas emissions and air pollution.</li>
+            <li><strong>Sustainability:</strong> Renewable sources are inexhaustible and can meet future energy demands.</li>
+            <li><strong>Economic Growth:</strong> Creates jobs in manufacturing, installation, and maintenance.</li>
+            <li><strong>Energy Independence:</strong> Reduces reliance on imported fossil fuels.</li>
+        </ul>
+    </div>
+    
+    <!-- Challenges Section -->
+    <div id="challenges" class="section">
+        <h2 style="font-size: 25px;text-align: center;color:  rgb(7, 149, 142);">Challenges & Solutions</h2>
+        <ul style="font-size: 16px;">
+
+          <li><strong>Intermittency:</strong> Renewable energy sources like solar and wind are not always available.<br>
+            <em>Solution:</em> Develop energy storage systems like batteries.</li>
+          <li><strong>High Initial Costs:</strong> Installation of renewable energy systems can be expensive.<br>
+            <em>Solution:</em> Government subsidies and incentives can make it more affordable.</li>
+          <li><strong>Land Use:</strong> Large-scale renewable energy projects require significant land.<br>
+            <em>Solution:</em> Optimize land use and integrate renewable systems into existing infrastructure.</li>
+        </ul>
+      </div>
+     
+    <!-- Circular Economy & Waste Reduction -->
+    <div id="Circular" class="section">
+        <h2 style="font-size: 25px;text-align: center;color:  rgb(7, 149, 142);">Circular Economy & Waste Reduction</h2>
+        <p style="font-size: 16px;">
+            A circular economy is an economic system focused on eliminating waste and continuously using resources.<br> Unlike the traditional linear economy (which follows a "take-make-dispose" model), a circular economy is<br> designed to reduce waste, extend product lifecycles, and promote sustainability.</p>
+        <p style="font-size: 16px; text-align: left;">Key Strategies for Minimizing Waste, Recycling, and Sustainable Consumption</p>  
+            <ol style="font-size: 16px;">
+                <li>Waste Reduction Strategies
+                    <ul style="list-style: square"> 
+                        <li>Reducing Single-Use Plastics – Encouraging reusable alternatives (e.g., cloth bags, metal straws, refillable water bottles).</li>
+                        <li>Eco-Friendly Product Design – Creating products that are durable, repairable, and recyclable.</li>
+                        <li>Minimal Packaging – Using biodegradable, compostable, or recyclable packaging materials</li>
+                    </ul>
+                </li>
+
+                <li>Recycling & Upcycling
+                    <ul style="list-style: square"> 
+                        <li>Efficient Recycling Systems – Governments and businesses developing better waste collection, sorting, and processing facilities.</li>
+                        <li>Product Take-Back Programs – Companies reclaiming used products (e.g., electronic waste recycling, clothing recycling programs).</li>
+                        <li>Upcycling & Repurposing – Transforming waste materials into new, higher-value products (e.g., turning old clothes into bags).</li>
+                    </ul>
+                </li>
+            
+
+                <li>Sustainable Consumption Practices
+                    <ul style="list-style: square">
+                        <li>Circular Business Models – Companies shifting to product-as-a-service models (e.g., renting clothes instead of buying).</li>
+                        <li>Ethical & Sustainable Products – Choosing products made from recycled or sustainable materials.</li>
+                        <li>Sharing Economy – Promoting ride-sharing, tool libraries, and community-based resource sharing to reduce waste.</li>
+                    </ul>
+                </li>
+            </ol> 
+    </div>
+      
+    <p class="top"><a href="#top">Go top</a></p><!-- A button to scroll back to the top of the page -->
+
+    
+   
+
+<!--Main Footer-->
+<footer>
+    <div class="footer-content">
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2>
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+    </div>
+    <div class="styling">
+        <h2>Links</h2>
+        <a href="style.css" target="_blank">General Page Styling</a>
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+    </div>
+
+    <!--Copyrights Informations-->
+    <div class="copyright">
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+    </div>
+</footer>    
+
+</body>

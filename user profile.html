@@ -1,0 +1,396 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element of the HTML document, with language set to English -->
+<head> <!-- Contains meta-information about the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <link rel="stylesheet" href="style.css"> <!-- Links an external CSS file for styling -->
+    <title>PlanetPulse: Feel the Pulse;Act for the Planet. 🌍</title> <!-- Sets the title of the webpage -->
+    
+    <style>
+      /* Global Styles */
+      body {
+        font-family: serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        color: #004d40;
+        line-height: 1.6;
+      }
+  
+      .body_h1 {
+        text-align: center;
+        color: #00796b;
+        margin: 20px 0;
+      }
+  
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  
+      .user-name {
+        background: #00796b;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .user-name:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+  
+      .brandLogo {
+        display: flex;
+        align-items: center;
+      }
+  
+      .brandLogo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 15px;
+        transition: transform 0.3s ease;
+      }
+  
+      .brandLogo img:hover {
+        transform: scale(1.1);
+      }
+  
+      .user-name {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+  
+      .user-informations, .rating, .contact-me, .calendar {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .user-informations:hover, .rating:hover, .contact-me:hover, .calendar:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+  
+      .user-informations span, .rating span, .contact-me span {
+        display: block;
+        margin: 10px 0;
+      }
+  
+      .user-informations ul, .contact-me ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      .user-informations ul li, .contact-me ul li {
+        margin: 10px 0;
+      }
+  
+      .rating-slider {
+        margin: 15px 0;
+      }
+  
+      .rating-slider input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+        transition: opacity 0.3s ease;
+      }
+  
+      .rating-slider input[type="range"]:hover {
+        opacity: 0.8;
+      }
+  
+      .rating-slider span {
+        display: inline-block;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+  
+      .contact-me form {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .contact-me label {
+        margin: 10px 0 5px 0;
+        font-weight: bold;
+      }
+  
+      .contact-me input {
+        padding: 10px;
+        border: 1px solid #00796b;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .contact-me input:hover {
+        border-color: #004d40;
+        box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
+      }
+  
+      .contact-me button {
+        background: #00796b;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px 5px;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+  
+      .contact-me button:hover {
+        background: #004d40;
+        transform: translateY(-2px);
+      }
+  
+      /* Calendar Section */
+      .calendar h2 {
+        margin-bottom: 20px;
+        color: #00796b;
+      }
+  
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+      }
+  
+      .calendar-day {
+        background: #e0f7fa;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .calendar-day:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .calendar-day.event {
+        background: #00796b;
+        color: #ffffff;
+      }
+  
+      .calendar-day.event:hover {
+        background: #004d40;
+      }
+  
+      .event-details {
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+  
+      .event-details i {
+        margin-right: 5px;
+      }
+  </style>
+</head>
+
+<body> <!-- Contains the content of the webpage -->
+    
+    <header> <!-- Header section of the webpage -->
+        <div class="logo-container"> <!-- Container for the logo and title -->
+            <img src="logo.png" alt="PlanetPulse logo" class="logo"> <!-- Logo image -->
+            <div class="title-container"> <!-- Container for the title and subtitle -->
+                <h1 class="title">PlanetPulse 🌍</h1> <!-- Main title of the webpage -->
+                <div class="vertical-line"></div> <!-- Vertical line for styling -->
+                <div class="subtitle-container"> <!-- Container for the subtitle -->
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> <!-- Subtitle text -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner"> 
+        <div class="navbar">
+            <ul>
+              <li><a href="home.html" >Home</a></li>
+              <li><a href="volunteer.html">Volunteer</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="table.html">Table</a></li>
+              <li><a href="feedback.html" >Feedback</a></li>
+              <li><a href="user profile.html" >Userprofile</a></li> >
+            </ul> 
+        </div>
+    </div>
+
+    <div class="container"> <!-- Main content container -->
+        <h1 class="body_h1">Welcome to PlanetPulse</h1> <!-- Welcome heading -->
+
+        <!-- Header Section -->
+        <div class="user-name">
+            <div class="brandLogo">
+                <img src="img_s_ 4/web_logo.jpg" alt="logo">
+                <span class="user-name">Peaches Angel</span>
+            </div>
+        </div>
+
+        <!-- User Information Section -->
+        <div class="user-informations">
+            <span><b>Date of Birth:</b> 29.09.2004</span>
+            <span><b>Age:</b> 20</span>
+            <span><b>Country:</b> Sri Lanka</span>
+            <span><b>Sex:</b> Female</span>
+            <span><b>Role:</b> Programmer</span>
+            <span><b>Volunteering Experience:</b></span>
+            <ul>
+                <li>I have done volunteering at school</li>
+                <li>Have done a project at university</li>
+                <li>Done research for my final project</li>
+            </ul>
+        </div>
+
+        <div class="rating"> 
+            <span>Rate Me</span>
+            <p>Your interaction with nature</p>
+            <div class="rating-slider">
+                <input type="range" id="rating1" name="rating1" min="1" max="5" step="1" value="0"> 
+                
+                <span id="ratingValue1">0</span>
+            </div>
+            <p>Your interaction with technology</p>
+            <div class="rating-slider">
+                <input type="range" id="rating2" name="rating2" min="1" max="5" step="1" value="0">
+                <span id="ratingValue2">0</span>
+            </div>
+        </div>
+
+
+        <div class="calendar">
+            <h2>Volunteering Calendar</h2>
+            <div class="calendar-grid">
+                <!-- Calendar Header -->
+                <div class="calendar-day" style="font-weight: bold;">Sun</div>
+                <div class="calendar-day" style="font-weight: bold;">Mon</div> 
+                <div class="calendar-day" style="font-weight: bold;">Tue</div>
+                <div class="calendar-day" style="font-weight: bold;">Wed</div>
+                <div class="calendar-day" style="font-weight: bold;">Thu</div>
+                <div class="calendar-day" style="font-weight: bold;">Fri</div>
+                <div class="calendar-day" style="font-weight: bold;">Sat</div>
+
+                <!-- Days with Events -->
+                <div class="calendar-day">1</div>
+                <div class="calendar-day">2</div>
+                <div class="calendar-day">3</div>
+                <div class="calendar-day event">
+                    4
+                    <div class="event-details"> <!-- Event details -->
+                        <i class="fas fa-tree"></i> Reforestation Drive <!-- Event icon and description -->
+                    </div>
+                </div>
+                <div class="calendar-day">5</div> 
+                <div class="calendar-day">6</div>
+                <div class="calendar-day">7</div>
+                <div class="calendar-day">8</div> 
+                <div class="calendar-day">9</div> 
+                <div class="calendar-day">10</div> 
+                <div class="calendar-day event"> 
+                    11
+                    <div class="event-details"> <!-- Event details -->
+                        <i class="fas fa-sun"></i> Solar Energy Workshop 
+                    </div>
+                </div>
+                <div class="calendar-day">12</div> 
+                <div class="calendar-day">13</div> 
+                <div class="calendar-day">14</div>
+                <div class="calendar-day">15</div>
+                <div class="calendar-day">16</div>
+                <div class="calendar-day">17</div>
+                <div class="calendar-day">18</div> 
+                <div class="calendar-day event">
+                    19
+                    <div class="event-details"> <!-- Event details -->
+                        <i class="fas fa-recycle"></i> Community Recycling Day 
+                    </div>
+                </div>
+                <div class="calendar-day">20</div> 
+                <div class="calendar-day">21</div> 
+                <div class="calendar-day">22</div> 
+                <div class="calendar-day">23</div> 
+                <div class="calendar-day">24</div> 
+                <div class="calendar-day">25</div> 
+                <div class="calendar-day">26</div> 
+                <div class="calendar-day">27</div> 
+                <div class="calendar-day">28</div> 
+                <div class="calendar-day">29</div>
+                <div class="calendar-day">30</div> 
+                <div class="calendar-day">31</div> 
+            </div>
+        </div>
+
+        <div class="contact-me">
+            <form >
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="Enter your phone number" maxlength="10" required><br>
+                <label>E-mail</label>
+                <input type="email" placeholder="Enter your email" required><br>
+                <label>LinkedIn Profile</label>
+                <input type="url" placeholder="Enter your LinkedIn profile"><br>
+                <span>Home Address</span>
+                <ul>
+                    <li><input type="text" placeholder="First line"></li> 
+                    <li><input type="text" placeholder="Street"></li> 
+                    <li><input type="text" placeholder="City"></li> 
+                    <li><input type="text" placeholder="Province"></li> 
+                </ul>
+                <button type="submit">Submit</button> 
+                <button type="reset">Reset</button> 
+        </div>
+    </div>
+
+    <script> <!-- JavaScript for interactive functionality -->
+        document.addEventListener("DOMContentLoaded", function() { // Waits for the DOM to load
+            const slider1 = document.getElementById('rating1'); // Gets the first slider element
+            const output1 = document.getElementById('ratingValue1'); // Gets the first rating value display
+            output1.textContent = slider1.value; // Ensures initial value updates
+            slider1.addEventListener('input', function() { // Listens for input changes on the slider
+                output1.textContent = slider1.value; // Updates the rating value display
+            });
+
+            const slider2 = document.getElementById('rating2'); // Gets the second slider element
+            const output2 = document.getElementById('ratingValue2'); // Gets the second rating value display
+            output2.textContent = slider2.value; // Ensures initial value updates
+            slider2.addEventListener('input', function() { // Listens for input changes on the slider
+                output2.textContent = slider2.value; // Updates the rating value display
+            });
+        });
+    </script>
+
+    <footer> <!-- Footer section of the webpage -->
+        <div class="footer-content"> 
+            <h2>Page Editors</h2>
+            <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+            <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+            <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+            <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+        </div>
+        <div class="styling"><!-- A container for styling and policy links -->
+            <h2>Links</h2><!-- Heading for the "Links" section -->
+            <a href="style.css" target="_blank">General Page Styling</a><!-- Link to the CSS file -->
+            <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a><!-- Link to the Privacy Policy -->
+            <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a><!-- Link to the Terms and Conditions -->
+            <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p><!-- A disclaimer note -->
+        </div>
+    
+        <!--Copyrights Informations-->
+        <div class="copyright"><!-- A container for the copyright notice -->
+            <p>&copy; 2025 PlanetPulse. All rights reserved.</p><!-- Copyright text -->
+        </div>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html><!-- Declares the document type and version of HTML (HTML5) -->
+<html lang="en"> <!-- The root element of the page, and we're setting the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- This makes sure the browser understands special characters and symbols -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- This makes the page look good on phones and tablets -->
+    <link rel="stylesheet" href="style.css"><!-- This links our CSS file to style the page -->
+
+    <title>PlanetPulse:Feel the Pulse Act for the Planet 🌍</title>
+    <style>
+        table{
+          width: 100%; /* Sets the table width to 100% of its container */
+          border-collapse: collapse; /* Removes spacing between table cells */
+          margin: 20px 0; /* Adds margin above and below the table */
+          box-shadow: 0 4px 8px rgb(1, 55, 17); /* Adds a shadow effect to the table */
+          background-color: rgb(140, 208, 160); /* Sets the table background color */
+          position: relative; /* Positions the table relatively */
+          overflow: hidden; /* Hides any content that overflows the table */
+          margin-bottom: 40px; /* Adds extra margin at the bottom of the table */
+        }
+        th, td {
+          padding: 12px; /* Adds padding inside table headers and cells */
+          text-align: left; /* Aligns text to the left within cells */
+          border-bottom: 2px solid #022904; /* Adds a bottom border to cells */
+        }
+        th {
+          background-color: rgb(7, 149, 73); /* Sets the background color for table headers */
+          color: rgb(255, 255, 255); /* Sets the text color for table headers */
+          font-weight: bold; /* Makes the text in headers bold */
+          position: sticky; /* Makes headers stick to the top when scrolling */
+          top: 0; /* Positions sticky headers at the top of the table */
+        }
+        
+        tr:hover {
+          background-color: #f2f6bb; /* Changes the background color of a row on hover */
+          transition: background-color 0.3s ease; /* Adds a smooth transition effect */
+
+        }
+        .thumbnail {
+          width: 30px; /* Sets the width of thumbnail images */
+          height: 30px; /* Sets the height of thumbnail images */
+          border-radius: 50%; /* Makes thumbnail images circular */
+        }
+        .icon {
+          font-size: 18px; /* Sets the size of icons */
+          color: #d10d0d; /* Sets the color of icons */
+          animation: bounce 0.5s infinite alternate; /* Adds a bounce animation to icons */
+        }
+        @keyframes bounce {
+          from { transform: translateY(0); } /* Starting point of the bounce animation */
+          to { transform: translateY(-5px); } /* Ending point of the bounce animation */
+        }
+        a {
+          color: #05314e;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        .tooltip {
+          position: relative; /* Positions the tooltip relative to its container */
+          display: inline-block; /* Displays the tooltip as an inline block */
+        }
+        .tooltip .tooltiptext {
+          visibility: hidden; /* Hides the tooltip text by default */
+          width: 120px; /* Sets the width of the tooltip */
+          background-color: #1076dc; /* Sets the background color of the tooltip */
+          color: #fff; /* Sets the text color of the tooltip */
+          text-align: center; /* Centers the text inside the tooltip */
+          border-radius: 5px; /* Rounds the corners of the tooltip */
+          padding: 5px; /* Adds padding inside the tooltip */
+          position: absolute; /* Positions the tooltip absolutely */
+          z-index: 1; /* Ensures the tooltip appears above other elements */
+          bottom: 125%; /* Positions the tooltip above the element */
+          left: 50%; /* Centers the tooltip horizontally */
+          margin-left: -60px; /* Adjusts the horizontal position of the tooltip */
+          opacity: 0; /* Makes the tooltip fully transparent by default */
+          transition: opacity 0.3s; /* Adds a fade-in effect for the tooltip */
+        }
+        .tooltip:hover .tooltiptext {
+          visibility: visible; /* Makes the tooltip visible on hover */
+          opacity: 1; /* Makes the tooltip fully opaque on hover */
+        }
+        .progress-bar {
+          width: 100%; /* Sets the width of the progress bar */
+          height: 10px; /* Sets the height of the progress bar */
+          background-color: white; /* Sets the background color of the progress bar */
+          border-radius: 5px; /* Rounds the corners of the progress bar */
+          overflow: hidden; /* Hides any content that overflows the progress bar */
+        }
+        .progress-bar div {
+          height: 100%; /* Sets the height of the progress bar fill */
+          background-color: gold; /* Sets the color of the progress bar fill */
+          border-radius: 5px; /* Rounds the corners of the progress bar fill */
+        }
+        .expandable-row {
+          cursor: pointer; /* Changes the cursor to a pointer when hovering over expandable rows */
+        }
+        
+    </style>
+</head>
+  <body>
+
+    <!--Header Section-->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <li><a href="profile.html" >Userprofile</a></li>
+            </ul> 
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <h2 style="text-align: center;font-size: 45px;color: rgb(99, 8, 94);">Renewable Energy Statistics (2025)</h2>
+    <table aria-label="Climate Action Dashboard">
+        <thead>
+          <tr>
+            <th colspan="6" style="text-align: center;">
+              <img src="logo.png" alt="Website Logo" width="100" style="display: block;margin: auto;"></th>
+          </tr>
+            <tr>
+            <!-- Table row for column headers -->
+              <th></th>
+                <!-- Empty header cell -->
+              <th>Initiative</th>
+                <!-- Header for the Initiative column -->
+              <th>Status</th>
+                <!-- Header for the Status column -->
+              <th>Impact</th>
+                <!-- Header for the Impact column -->
+              <th>Progress</th>
+                <!-- Header for the Progress column -->
+              <th>Details</th>
+                <!-- Header for the Details column -->
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="expandable-row">
+              <td>
+                <img src="imgS2/SolarA.png" alt="Solar power" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                <!-- Image for Solar Power Adoption -->
+                <h4>Solar Power Adoption &#x1F4A1;</h4>
+              </td>
+                <td>Residential</td>
+                <!-- Initiative type -->
+                <td><span class="icon">✔</span></td>
+                <!-- Status icon (checkmark) -->
+                <td>High</td><!-- Impact level -->
+                <td>
+                    <div class="progress-bar">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </td>
+                <td><a href="https://www.powermag.com/a-global-look-at-residential-solar-adoption-rates/" target="_blank" aria-label="Learn more about Solar Power Adoption">Learn More</a></td><!-- Opens the link in a new tab -->
+            </tr>
+
+            <tr class="expandable-row">
+              <td>
+                <img src="imgS2/Electriccar.png" alt="Electric car" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                <h4>Electric Vehicles &#x1F697;</h4>
+              </td>
+                <td>Public Transport</td>
+                <td><span class="icon">✔</span></td>
+                <td>High</td>
+                <td>
+                    <div class="progress-bar">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </td>
+                <td><a href="https://afdc.energy.gov/vehicles/how-do-all-electric-cars-work" aria-label="Learn more about Electric Vehicles">Learn More</a></td>
+            </tr>  
+
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/Reforest.png" alt="Reforestation" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Reforestation &#x1F333;</h4>
+                </td>
+                <td>Urban Areas</td>
+                <td><span class="icon">✔</span></td>
+                <td>Medium</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 40%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://www.britannica.com/science/reforestation" aria-label="Learn more about Reforestation">Learn More</a></td>
+              </tr>
+
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/Garbage.png" alt="Waste Management" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Waste Management &#x1F5D1;</h4>
+                </td>
+                <td>Recycling Programs</td>
+                <td><span class="icon">✔</span></td>
+                <td>High</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 80%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://blog.cleanhub.com/what-is-waste-management" aria-label="Learn more about Waste Management">Learn More</a></td>
+              </tr>
+             
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/Carbontax.png" alt="Carbon Tax" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Carbon Tax &#x1F32B;</h4>
+                </td>
+                <td>Implementation</td>
+                <td><span class="icon">✘</span></td>
+                <td>Low</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 10%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://taxfoundation.org/taxedu/glossary/carbon-tax/#:~:text=A%20carbon%20tax%20is%20levied,to%20produce%20less%20of%20them." aria-label="Learn more about Carbon Tax">Learn More</a></td>
+              </tr>
+
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/ClimateEdu.png" alt="Climate Education" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Climate Education &#x1F321;</h4>
+                </td>
+                <td>School Programs</td>
+                <td><span class="icon">✔</span></td>
+                <td>Medium</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 65%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.climateeducation.co.uk/&ved=2ahUKEwjM5KCo2uiLAxXTafUHHZcOAmkQFnoECBQQAQ&usg=AOvVaw09OWdXj6JEEubB3toptS2U" aria-label="Learn more about Climate Education">Learn More</a></td>
+              </tr>
+
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/Greenbul.png" alt="Green Buildings" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Green Buildings &#x1F3D9;</h4>
+                </td>
+                <td>New Constructions</td>
+                <td><span class="icon">✔</span></td>
+                <td>High</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 70%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.iberdrola.com/sustainability/sustainable-green-buildings&ved=2ahUKEwje9r602uiLAxXvnq8BHZMAGioQFnoECF4QAQ&usg=AOvVaw14fsJRxNNtH5pIuqqii1bz" aria-label="Learn more about Green Buildings">Learn More</a></td>
+              </tr>
+
+              <tr class="expandable-row">
+                <td>
+                  <img src="imgS2/Storage.png" alt="Renewable Energy Storage" class="img" style="width: 160px;height: 150px;padding-left: 15px;">
+                  <h4>Renewable Energy Storage &#x2600;</h4>
+                </td>
+                <td>Battery Technology</td>
+                <td><span class="icon">✔</span></td>
+                <td>Medium</td>
+                <td>
+                  <div class="progress-bar">
+                    <div style="width: 45%;"></div>
+                  </div>
+                </td>
+                <td><a href="https://www.sciencedirect.com/topics/engineering/renewable-energy-storage" aria-label="Learn more about Renewable Energy Storage">Learn More</a></td>
+              </tr>
+  
+        </tbody>
+    </table>
+  
+
+
+
+
+
+
+  <!--Main Footer-->
+  <footer><!-- The footer is the bottom part of the page, usually for extra info and links -->
+    <div class="footer-content"><!-- A container for the footer content -->
+        <!--Page Editors links & styling links-->
+        <h2>Page Editors</h2><!-- Heading for the Page Editors section -->
+
+        <!-- Placeholder link for Page Editors-->
+        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+    </div>
+    <div class="styling"><!-- A container for styling and policy links -->
+        <h2>Links</h2><!-- Heading for the "Links" section -->
+        <a href="style.css" target="_blank">General Page Styling</a><!-- Link to the CSS file -->
+        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a><!-- Link to the Privacy Policy -->
+        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a><!-- Link to the Terms and Conditions -->
+        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p><!-- A disclaimer note -->
+    </div>
+
+    <!--Copyrights Informations-->
+    <div class="copyright"><!-- A container for the copyright notice -->
+        <p>&copy; 2025 PlanetPulse. All rights reserved.</p><!-- Copyright text -->
+    </div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

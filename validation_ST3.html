@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Page Student - provide your student name</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
+
+    <style>
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        main {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #fafafa;
+        }
+        
+        .ref li{
+            list-style: none;
+            padding-bottom: 9px;
+        }
+        
+        aside a{
+            text-decoration : none;
+        }
+        
+        aside li{
+            padding-bottom: 4px;
+        }
+        
+        .stud {
+            text-align: center;
+            line-height: 0;
+            background-color: #cbccc2ef;
+            color: black;
+            margin-top: 8px;
+        }
+        
+        .top {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+                
+        .top a {
+            padding: 10px 20px; /* Adds padding for button-like feel */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            text-decoration: none; /* Removes underline */
+            border-radius: 20px; /* Rounds the corners */
+            font-size: 12px; /* Adjust font size */
+            font-weight: bold; /* Make the text stand out */
+        }
+        
+        .top a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        }
+        
+        img{
+            width: 90%;
+        }
+        
+            </style>        
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+        <div class="logo-container">
+            <img src="imgs3/logo.png" alt="PlanetPulse logo" class="logo">
+            <div class="title-container">
+                <h1 class="title">PlanetPulse 🌍</h1>
+                <div class="subtitle-container">
+                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+                </div>
+            </div>
+         </div>
+    </header>
+
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <!-- Navigation links | add class="active" to indicate which page is active-->
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html" >Volunteer</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="user profile.html">Userprofile</a></li>
+            </ul> 
+        </div>
+      </div>
+
+    <section class="stud">
+        <h2>Niveka Wijeratne, Student 03</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update the content of the following sections with the information that corresponds to the pages you implemented  -->
+
+            <section>
+                <h2 id="feedbackVal">Feedback Page validation report</h2>
+                    <p>While validating my feedback page, I encountered an error where the (label for="send-email") referenced a non-existent form control. I resolved this by removing the `for` attribute and using a plain (label) instead. After this fix, the page passed validation without errors. This confirms that the HTML and CSS follows best practices and web standards.</p>
+                    <h3>Feedback Page HTML Validation Report</h3>
+                    <img src="imgs3/feedbackhtmlvalid.png">
+                    <h3>Feedback Page CSS Validation Report</h3>
+                    <img src="imgs3/feedbackcss.png">
+                    <h3>Global CSS Validation Report</h3>
+                    <img src="imgs3/stylecssvalid.png">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor _ST3.html#feedback">Page Editor - Feedback Page</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section>
+
+            <section>
+                <h2 id="teamVal">Team Page validation report</h2>
+                <p>After validating my team page using the W3C Nu Validator, it returned no errors or warnings. This confirms that the HTML and CSS follows best practices and web standards.</p>
+                <h3>Team Page HTML Validation Report</h3>
+                <img src="imgs3/teamhtmlvalid.png">
+                <h3>Team Page CSS Validation Report</h3>
+                <img src="imgs3/teamcssvalid.png">
+
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor _ST3.html#team">Page Editor - Team Page</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+            <section>
+                <h2 id="contentVal">Content Page validation report</h2>
+                <p>After validating my team page using the W3C Nu Validator, it returned no errors or warnings. This confirms that the HTML and CSS follows best practices and web standards.</p>
+                <h3>Content Page HTML Validation Report</h3>
+                <img src="imgs3/contenthtmlvalid.png">
+                <h3>Content Page CSS Validation Report</h3>
+                <img src="imgs3/contentcssvalid.png">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor _ST3.html#content">Page Editor - Content Page</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#feedbackVal">Feedback page</a> </li>
+                        <li><a href="#teamVal">Team page</a></li>
+                        <li><a href="#contentVal">Content page</a></li>
+                    </ul>
+                </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!--Page Editors links & styling links-->
+            <h2>Page Editors</h2>
+            <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+            <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+            <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+            <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+         </div>
+         <div class="styling">
+            <h2>Links</h2>
+            <a href="style.css" target="_blank">General Page Styling</a>
+            <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+            <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+            <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+         </div>
+      
+         <!--Copyrights Informations-->
+         <div class="copyright">
+            <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+         </div>
+    </footer>
+</body>
+</html>

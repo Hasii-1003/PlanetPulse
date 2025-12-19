@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanetPulse: Feel the Pulse Act for the Planet 🌍</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to global CSS -->
+  <style>
+    /* Ensures the main content section takes up at least 80% of the viewport height */
+main {
+  min-height: 80vh; 
+  padding-bottom: 900px; /* Adds extra spacing at the bottom to prevent content from being cut off */
+}
+
+/* Sets a gradient background with an overlaid image */
+body {
+  background-image: linear-gradient(rgba(6, 197, 111, 0.5), rgba(31, 220, 234, 0.5)),url(imgs3/teambackground.jpeg);
+}
+
+/* Styles the main container of the team page */
+.team-page {
+  max-width: 800px; /* Restricts width to ensure readability */
+  margin: 0 auto; /* Centers the page */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Styles the team members section */
+.team-members {
+  display: grid; /* Uses grid layout for proper alignment */
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+  grid-template-rows: repeat(3, 1fr); /* Creates a 3-row grid */
+  gap: 20px; /* Adds spacing between grid items */
+  justify-items: center; /* Aligns grid items horizontally */
+  align-items: center; /* Aligns grid items vertically */
+  position: relative;
+  height: 400px; /* Sets a fixed height for consistency */
+  margin-bottom: 50px; /* Adds spacing below the section */
+}
+
+/* Individual team member container */
+.team-member {
+  position: relative;
+  width: 200px; /* Sets a fixed width for uniformity */
+  text-align: center; /* Centers text inside each team member block */
+  cursor: pointer; /* Indicates interactivity */
+  margin-bottom: 30px; /* Adds space between members */
+}
+
+/* Styles the team member images */
+.team-member img {
+  width: 100%; /* Makes images responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 50%; /* Creates a circular shape */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition effect */
+  border: 4px solid #2c3e50; /* Adds a dark blue border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+}
+
+/* Effects when hovering over a team member */
+.team-member:hover img {
+  opacity: 0.8; /* Slightly reduces opacity */
+  transform: scale(1.1); /* Slightly enlarges the image */
+  border-color: #2b9569; /* Changes border color on hover */
+}
+
+/* Styles the team member details that appear on hover */
+.team-member .details {
+  position: absolute;
+  top: 100%; /* Positions the details below the image */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the details */
+  width: 150px; /* Sets a fixed width */
+  padding: 5px;
+  background-color: rgba(44, 62, 80, 0.9); /* Adds a dark semi-transparent background */
+  color: white;
+  border-radius: 5px; /* Rounds corners */
+  opacity: 0; /* Hides details by default */
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s; /* Smooth transition */
+  z-index: 10; /* Ensures the details appear above other elements */
+}
+
+/* Shows the details when the user hovers over a team member */
+.team-member:hover .details {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles the team page heading */
+.team-page h1 {
+  font-size: 2.5rem; /* Large font size */
+  font-family: serif;
+  color: #2c3e50; /* Dark blue color */
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  margin-bottom: 30px; /* Adds space below the heading */
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+/* Styles the team member name */
+.team-member h2 {
+  margin: 10px 0;
+  font-family: serif;
+  font-size: 18px;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+}
+
+/* Styles the role section of each team member */
+.team-member h3 {
+  margin: 15px 0 10px;
+  font-family: serif;
+  font-size: 18px;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles the task description inside details */
+.team-member .details p {
+  margin: 5px 0;
+  font-family: serif;
+  font-size: 16px;
+  color: #bdc3c7; /* Light grey text for readability */
+}
+
+/* Highlights task headings */
+.team-member .details p strong {
+  color: #3498db; /* Blue color for emphasis */
+  font-size: 20px;
+}
+
+/* Positions each team member to form a diamond layout */
+.team-member:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.team-member:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.team-member:nth-child(3) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.team-member:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Styles the footer */
+footer {
+  position: relative; /* Ensures footer stays in place */
+  width: 100%;
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="imgs3/logo.png" alt="PlanetPulse logo" class="logo">
+      <div class="title-container">
+          <h1 class="title">PlanetPulse 🌍</h1>
+          <div class="subtitle-container">
+              <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span> 
+          </div>
+      </div>
+   </div>
+  </header>
+
+  <div class="banner">
+    <div class="navbar">
+        <ul>
+            <!-- Navigation links | add class="active" to indicate which page is active-->
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="volunteer.html" >Volunteer</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="user profile.html">Userprofile</a></li>
+        </ul> 
+    </div>
+  </div>
+
+  <main>
+    <div class="team-page">
+      <h1>MEET OUR TEAM!</h1>
+      <div class="team-members">
+        <!-- Team Member 1 -->
+        <div class="team-member" tabindex="0">
+          <img src="imgs3/team1.jpg" alt="Team Member 1" width="200" height="200">
+          <h2>Hasindi Eraji<br>UoW no: w2120809</h2>
+          <h3>Role: Student 1</h3>
+          <div class="details">
+            <p><strong>Tasks:</strong></p>
+            <p>- Splash Screen</p>
+            <p>- Volunteer Page</p>
+            <p>- Content Page 1</p>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member" tabindex="0">
+          <img src="imgs3/team2.jpg" alt="Team Member 2" width="200" height="200">
+          <h2>Hasini Siriwardena<br>UoW no: w2121379</h2>
+          <h3>Role: Student 2</h3>
+          <div class="details">
+            <p><strong>Tasks:</strong></p>
+            <p>- Home Page</p>
+            <p>- Table Page</p>
+            <p>- Content Page 2</p>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member" tabindex="0">
+          <img src="imgs3/team3.jpg" alt="Team Member 3" width="200" height="200">
+          <h2>Niveka Wijeratne<br>UoW no: w2120096</h2>
+          <h3>Role: Student 3</h3>
+          <div class="details">
+            <p><strong>Tasks:</strong></p>
+            <p>- Feedback Page</p>
+            <p>- Team Page</p>
+            <p>- Content Page 3</p>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-member" tabindex="0">
+          <img src="imgs3/team4.jpg" alt="Team Member 4" width="200" height="200">
+          <h2>Dharani Wasundara<br>UoW no: w2120109</h2>
+          <h3>Role: Student 4</h3>
+          <div class="details">
+            <p><strong>Tasks:</strong></p>
+            <p>- User Profile</p>
+            <p>- Sitemap</p>
+            <p>- Content Page 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <!--Page Editors links & styling links-->
+      <h2>Page Editors</h2>
+      <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
+      <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
+      <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
+      <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
+   </div>
+   <div class="styling">
+      <h2>Links</h2>
+      <a href="style.css" target="_blank">General Page Styling</a>
+      <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a>
+      <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a>
+      <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p>
+   </div>
+
+   <!--Copyrights Informations-->
+   <div class="copyright">
+      <p>&copy; 2025 PlanetPulse. All rights reserved.</p>
+   </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/*Body of the page Styling*/
+.body{
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8e8;
+    box-sizing: border-box;
+    position: relative;
+  }
+  /*Banner section styling*/
+  .banner{
+    max-width: 1550px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -40px;
+    height: 65px;
+    background-color: rgb(31, 103, 101);
+    padding: 10px;
+  }
+  
+  
+  /*Style for logo */
+  .logo{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    cursor: pointer;
+  }
+  
+  /*Title & subtitle container styling*/
+  .title-container{
+    background-color: #f8f8e8;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    max-width: 1550px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -40px;
+    padding: 24px ;
+    left: -20px;
+    color: black;
+  
+  }
+  
+  .title{
+    font-size: 65px;
+  
+  }
+  
+  .subtitle{
+    position: absolute;
+    text-transform: capitalize;
+    top: 80px;
+    font-size: 24px;
+    margin-left: 100px;
+  }
+  
+  .background{
+    background-position: center;
+    margin-left: 60px;
+    padding: 70px;
+    margin-top: -50px;
+  }
+    
+  .h1{
+    margin-bottom: 0px;
+  }
+  
+  
+  /*Navbar styling*/
+  .navbar{
+    width: 85%;
+    margin: auto;
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*Navbar list items*/
+  .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .navbar ul li a{
+    color: white;
+    text-decoration: none;
+  }
+  /* Hover effect for navbar items */
+  .navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .navbar ul li:hover:after{
+    width: 100%;
+  }
+  
+  /*Styling for page editors & Styling links*/
+  .footer-content{
+    background-color: rgb(31, 103, 101);
+    padding: 36px ;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    left: 0px;
+    max-width: 1550px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -40px;
+  
+  }
+  .footer-content a:hover{
+    color: rgb(19, 71, 70);
+  }
+  .footer-content a{
+    color: white;
+    text-decoration: none;
+    margin: 40px;
+  }
+  
+  .styling{
+    background-color: rgb(41, 128, 125);
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    max-width: 1550px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -40px;
+  
+  }
+  
+  .styling a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 40px;
+  }
+  .styling a:hover{
+    color: rgba(18, 217, 220, 0.799);
+  }    
+  
+  .copyright{
+    background-color: rgb(41, 128, 125);
+    color: white;
+    padding: 2px;
+    text-align: center;
+    max-width: 1550px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -40px;
+    margin-bottom: -20px;
+  }
+  
+  
+  
+  
+  @media (max-width: 700px){
+  
+  
+  }
