@@ -1,148 +1,149 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>PlanetPulse:Feel the Pulse Act for the Planet 🌍</title>
+    <meta http-equiv="refresh" content="4;url=home.html">
+    <title>PlanetPulse: Feel the Pulse Act for the Planet 🌍</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #f8f8e8;
+        }
+
         .splash-screen {
-    background: url('CC 01.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-.splash-container {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    transition: opacity 1s ease-out;
-}
-.splash-container {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    transition: opacity 1s ease-out;
-    text-align: center; /* Add this line to center the text */
-}
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('CC 03.avif');
+            background-size: cover;
+            background-position: center;
+        }
 
-/* Body Styling */
-.body {
-    font-family: serif;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8e8;
-    box-sizing: border-box;
-}
+        .splash-container {
+            width: min(700px, 100%);
+            padding: 40px 34px;
+            background-color: rgba(18, 64, 61, 0.78);
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            border-radius: 14px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        }
 
-.body {
-    font-family: serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('CC 03.avif'); 
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    box-sizing: border-box;
-}
-       
-/* Loader Animation */
-.loader {
-    margin: 20px auto; /* This will center horizontally */
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    border: 5px solid white;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1s linear infinite;
-    display: block; /* Ensure it's a block-level element */
-}
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 12px;
+        }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+        h1 {
+            margin: 0;
+            font-size: 54px;
+        }
 
-</style>
+        .slogan {
+            margin: 10px 0 28px;
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        .team-box {
+            width: fit-content;
+            margin: 0 auto 26px;
+            padding: 18px 30px;
+            background-color: rgba(255, 255, 255, 0.14);
+            border-radius: 10px;
+        }
+
+        .team-box h2 {
+            margin: 0 0 12px;
+            font-size: 26px;
+        }
+
+        .team-box p {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .loading-text {
+            margin: 0 0 14px;
+            font-size: 18px;
+        }
+
+        .loader {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto;
+            border: 6px solid rgba(255, 255, 255, 0.45);
+            border-top-color: #f5d84f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .splash-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .slogan {
+                font-size: 20px;
+            }
+
+            .team-box p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
-
-    <!--Header Section-->
-    <body><header>
-        <div class="logo-container">
+<body>
+    <main class="splash-screen">
+        <div class="splash-container">
             <img src="logo.png" alt="PlanetPulse logo" class="logo">
-            <div class="title-container">
-                <h1 class="title">PlanetPulse 🌍</h1>
-                <div class="subtitle-container">
-                    <span class="subtitle">Feel the Pulse &amp;<br>Act for the Planet.</span>
-                </div>     
-            </div>
-        </div>
-        
-    </header>
-    <div class="banner">
-        <div class="navbar">
-            <ul>
-                <!-- Navigation links | add class="active" to indicate which page is active-->
-                <li><a href="home.html" >Home</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-                <li><a href="table.html">Table</a></li>
-                <li><a href="feedback.html" >Feedback</a></li>
-                <li><a href="user profile.html" >Userprofile</a></li>
-            </ul> 
-        </div>
-    </div>
-    <h1 style="text-align: center;font-size: 50px;">Welcome to PlanetPulse</h1>
+            <h1>PlanetPulse 🌍</h1>
+            <p class="slogan">Feel the Pulse &amp; Act for the Planet.</p>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PlanetPulse 🌍</title>
-        <link rel="stylesheet" href="style.css"> <!-- Link to the provided CSS -->
-        <meta http-equiv="refresh" content="4;url=home.html"> <!-- Auto redirect -->
-    </head>
-    
-        <!-- Splash Content Section -->
-        <body class="body">   
-        <div id="splash" class="splash-container">
-            <p><strong>Team Members:</strong><br> 
-                Niveka Wijeratne <br> 
-                Dharani Wasundara <br> 
-                Hasini Siriwardane <br> 
-                Hasindi Eraji
-            </p>
-            <!-- Loader Animation -->
+            <div class="team-box">
+                <h2>Team Members</h2>
+                <p>
+                    Niveka Wijeratne<br>
+                    Dharani Wasundara<br>
+                    Hasini Siriwardane<br>
+                    Hasindi Eraji
+                </p>
+            </div>
+
+            <p class="loading-text">Loading home page...</p>
             <div class="loader"></div>
         </div>
-        </body>
+    </main>
 
-
-
-  
-<!--Main Footer-->
-<footer>
-    <div class="footer-content">
-        <!--Page Editors links & styling links-->
-        <h2>Page Editors</h2>
-        <a href="pageEditor _ST1.html" target="_blank">Page Editor 1</a>
-        <a href="pageEditor _ST2.html" target="_blank">Page Editor 2</a>
-        <a href="pageEditor _ST3.html" target="_blank">Page Editor 3</a>
-        <a href="pageEditor _ST4.html" target="_blank">Page Editor 4</a>
-    </div>
-    <div class="styling"><!-- A container for styling and policy links -->
-        <h2>Links</h2><!-- Heading for the "Links" section -->
-        <a href="style.css" target="_blank">General Page Styling</a><!-- Link to the CSS file -->
-        <a href="https://www.globalgoals.org/privacy-policy/" target="_blank">Privacy Policy</a><!-- Link to the Privacy Policy -->
-        <a href="https://www.globalgoals.org/terms-conditions/" target="_blank">Terms of Conditions</a><!-- Link to the Terms and Conditions -->
-        <p style="text-align: center;">These links direct to Global Goals' policies for reference purposes only and do not imply official affiliation</p><!-- A disclaimer note -->
-    </div>
-
-    <!--Copyrights Informations-->
-    <div class="copyright">
-        <p>© 2025 PlanetPulse. All rights reserved.</p>
-    </div>
-</footer>    
-</body></html>
+    <script>
+        setTimeout(function () {
+            window.location.href = "home.html";
+        }, 4000);
+    </script>
+</body>
+</html>
