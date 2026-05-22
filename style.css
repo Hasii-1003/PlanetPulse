@@ -6,66 +6,70 @@ body{
     background-color: #f8f8e8; /* Sets the background color of the body */
     box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
     position: relative; /* Positions the body relatively */
-    padding-top: 80px;
 }   
+  /*Header section styling*/
+header{
+    background-color: #f8f8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 12px 40px 8px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
   /*Banner section styling*/
 .banner{
-    max-width: 1550px; /* Sets the maximum width of the banner */
     width: 100%;
-    margin-top: -20px; /* Adjusts the top margin of the banner */
-    margin-left: -20px; /* Adjusts the left margin of the banner */
-    margin-right: -40px; /* Adjusts the right margin of the banner */
-    height: 65px; /* Sets the height of the banner */
+    min-height: 65px; /* Sets the height of the banner */
     background-color: rgb(31, 103, 101); /* Sets the background color of the banner */
     padding: 10px; /* Adds padding inside the banner */
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
     margin: 0;
     box-shadow: 0 2px 5px;
+    box-sizing: border-box;
     
 }
   
   
   /*Style for logo */
   .logo{
-    width: 180px; /* Sets the width of the logo */
-    height: 180px; /* Sets the height of the logo */
-    position: absolute; /* Positions the logo absolutely */
-    top: -10px; /* Positions the logo at the top of its container */
-    left: -20px; /* Adjusts the horizontal position of the logo */
+    width: 125px; /* Sets the width of the logo */
+    height: 125px; /* Sets the height of the logo */
+    object-fit: contain;
     cursor: pointer; /* Changes the cursor to a pointer when hovering over the logo */
-    z-index: 1001;
   }
   
   /*Title & subtitle container styling*/
   .title-container{
     background-color: #f8f8e8; /* Sets the background color of the title container */
     display: flex; /* Uses flexbox for layout */
-    align-items: baseline; /* Aligns items to the baseline */
+    align-items: center; /* Aligns items to the center */
     justify-content: center; /* Centers the content horizontally */
-    max-width: 1550px; /* Sets the maximum width of the title container */
-    margin-top: -20px; /* Adjusts the top margin of the title container */
-    margin-left: -20px; /* Adjusts the left margin of the title container */
-    margin-right: -40px; /* Adjusts the right margin of the title container */
-    padding: 24px; /* Adds padding inside the title container */
-    left: -20px; /* Adjusts the horizontal position of the title container */
+    gap: 42px;
+    padding: 0; /* Removes extra padding inside the title container */
     color: black; /* Sets the text color to black */
   
   }
   
   .title{
     font-size: 65px;
+    margin: 0;
   
   }
   
   .subtitle{
-    position: absolute; /* Positions the subtitle absolutely */
     text-transform: capitalize; /* Capitalizes the subtitle text */
-    top: 80px; /* Positions the subtitle 80px from the top */
     font-size: 24px; /* Sets the font size of the subtitle */
-    margin-left: 100px; /* Adjusts the left margin of the subtitle */
+    margin: 0; /* Removes extra margin around the subtitle */
+    line-height: 1.25;
   }
   
   .background{
@@ -89,6 +93,14 @@ body{
     display: flex; /* Uses flexbox for layout */
     align-items: center; /* Centers the items vertically */
     justify-content: space-between; /* Spaces the items evenly */
+  }
+  .navbar ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
   }
   /*Navbar list items*/
   .navbar ul li{
